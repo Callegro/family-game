@@ -1,292 +1,452 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#fff4e9">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="우리 가족 옷 여행">
-  <meta name="description" content="다양한 가족을 만들고 세계 여러 나라의 전통의상을 함께 입어 보는 유아용 옷입히기 게임">
-  
-  
-  <title>우리 가족 옷 여행 ✨</title>
-  
-  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff4ed">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>나만의 가족 옷입히기 🌷</title>
 <style>
-:root{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;color:#443c51;background:#fff5ed;--ink:#443c51;--muted:#867d8d;--purple:#8a72d6;--purple2:#6f59bf;--pink:#f6a1bc;--peach:#ffe2d0;--mint:#c8efdf;--border:#e9dfe9;--white:#fff;--shadow:0 14px 42px rgba(102,75,117,.10)}
-*{box-sizing:border-box}html,body{height:100%;margin:0}body{min-height:100%;background:radial-gradient(circle at 12% 18%,#ffdfef 0,transparent 28%),radial-gradient(circle at 88% 18%,#e4ddff 0,transparent 34%),radial-gradient(circle at 55% 90%,#d8fff0 0,transparent 34%),#fff8f0}button,input,select{font:inherit}button{cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}button:disabled{opacity:.42;cursor:not-allowed}button:focus-visible,input:focus-visible,select:focus-visible{outline:4px solid #edb8ff;outline-offset:3px}h1,h2,h3,h4,p{margin:0}h1{font-size:clamp(25px,3vw,42px);letter-spacing:-1.4px}h2{font-size:clamp(20px,2.2vw,29px);letter-spacing:-.8px}h3{font-size:17px}p{line-height:1.6}.app-shell{width:min(1510px,100%);margin:auto;padding:20px 26px 30px;min-height:100vh}.topbar{display:flex;gap:14px;align-items:center;justify-content:space-between;margin-bottom:17px}.brand{display:flex;align-items:center;gap:12px}.brand-mark{width:56px;height:56px;background:#9b85ee;border-radius:19px;box-shadow:inset 0 -6px #8166d8,0 8px 20px #9b85ee35;display:grid;place-items:center;color:white;font-size:26px;font-weight:900;transform:rotate(-5deg)}.brand-name{font-size:21px;font-weight:900;letter-spacing:-1px}.brand-sub{font-size:12px;color:var(--muted);font-weight:700;margin-top:2px}.top-actions{display:flex;gap:7px;align-items:center}.stepbar{display:flex;gap:7px;padding:8px;background:#ffffffa9;border:1px solid #ffffff;border-radius:22px;margin-bottom:18px;overflow:auto}.step{display:flex;justify-content:center;align-items:center;gap:8px;flex:1;min-width:114px;padding:11px 8px;color:#9c92a4;border-radius:15px;font-size:13px;font-weight:900;white-space:nowrap}.step span{width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#eee8f2}.step.active{background:#a48bea;color:white;box-shadow:0 4px 14px #9b85ee36}.step.active span{background:#ffffff38}.step.past{color:#8064bc}.step.past span{background:#e5dafc}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 265px;gap:18px;align-items:start}.main{min-width:0}.panel,.family-panel,.paper{background:#ffffffdd;border:1px solid #ffffff;border-radius:28px;box-shadow:var(--shadow)}.panel{padding:24px;min-height:570px}.family-panel{padding:17px;position:sticky;top:12px}.sidebar-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.sidebar-head h3{font-size:18px}.tiny-pill{background:#fff0cc;padding:6px 9px;border-radius:14px;font-size:11px;font-weight:900;color:#9a7515}.family-type{padding:15px;border-radius:20px;background:linear-gradient(140deg,#f9f1ff,#ffeef5);margin-bottom:12px}.eyebrow{color:#9d7dbf;letter-spacing:.1em;font-size:11px;font-weight:900}.family-type strong{display:block;font-size:20px;margin:4px 0 6px}.family-type p{font-size:11px;color:#817687}.family-mini-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;max-height:calc(100vh - 315px);overflow:auto}.family-mini{background:#fff9f5;border:1px solid #f1e5eb;border-radius:15px;text-align:center;padding:7px 2px;min-width:0}.family-mini .doll-wrap{height:92px}.family-mini .doll{transform:scale(.58);transform-origin:top center}.family-mini b{font-size:11px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.family-mini small{color:#aa8abb;font-size:10px}.empty-mini{text-align:center;padding:28px 6px;font-size:13px;color:#9f95a0;line-height:1.7}.helper-note{font-size:11px;color:#a29ba7;line-height:1.55;margin-top:13px}.kicker{display:inline-flex;align-items:center;gap:6px;background:#fff1cd;color:#8a6c30;border-radius:20px;padding:7px 12px;font-weight:900;font-size:12px;margin-bottom:10px}.section-title{margin-bottom:17px}.section-title p{font-size:14px;color:#8c8495;margin-top:8px}.btn{border:0;border-radius:16px;background:#f0e8f7;padding:12px 17px;color:#65577c;font-size:14px;font-weight:900;min-height:47px;transition:transform .1s,box-shadow .1s;display:inline-flex;align-items:center;justify-content:center;gap:7px;line-height:1.3}.btn:active:not(:disabled),.pick-card:active{transform:translateY(2px) scale(.99)}.btn-primary{background:#9476e1;color:#fff;box-shadow:0 8px 0 #7656c8,0 15px 25px #8f73d244;margin-bottom:6px}.btn-primary:active{box-shadow:0 4px 0 #7656c8,0 7px 12px #8f73d244}.btn-soft{background:#fff0d9;color:#a16d3f}.btn-white{background:white;border:2px solid #e9e0ef}.btn-small{font-size:12px;padding:8px 12px;min-height:36px;border-radius:12px}.btn-danger{color:#b65573;background:#ffe6ed}.btn-row{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-top:17px}.primary-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:22px;flex-wrap:wrap}.input-label{display:block;font-size:14px;font-weight:900;margin:0 0 8px}.text-input{width:100%;min-height:52px;padding:12px 16px;background:#fff;border:2px solid #e8ddef;border-radius:16px;color:#433852;font-size:18px;outline:0}.text-input:focus{border-color:#a68bea}.welcome{display:grid;grid-template-columns:minmax(0,1fr) 230px;align-items:center;gap:22px;min-height:520px}.welcome-copy h1{margin:10px 0 12px;line-height:1.22}.rainbow-text{color:#9776e4}.welcome-copy>p{color:#81788a;font-size:17px;margin-bottom:26px}.name-box{background:#fff7fb;border:2px dashed #e2cde6;padding:19px;border-radius:22px;max-width:460px}.hint{margin-top:11px;color:#9c8a9f;font-size:12px}.welcome-art{height:345px;background:linear-gradient(170deg,#e5dcff,#ffe6d1 65%,#c8f7df);border-radius:140px 140px 28px 28px;display:flex;align-items:flex-end;justify-content:center;gap:0;position:relative;overflow:hidden;padding-bottom:48px}.welcome-art::before{content:'✦  ✳  ✦';color:#fff;font-size:30px;position:absolute;top:50px;letter-spacing:16px}.welcome-art::after{content:'우리 같이 여행 가자!';background:white;position:absolute;bottom:12px;left:20px;right:20px;text-align:center;padding:9px 3px;border-radius:20px;color:#8e70c9;font-size:14px;font-weight:900}.welcome-art .doll:nth-child(1){transform:scale(.90) rotate(-6deg)}.welcome-art .doll:nth-child(2){transform:scale(1.06) rotate(4deg)}.welcome-art .doll:nth-child(3){transform:scale(.78) rotate(7deg)}.select-title{font-size:15px;font-weight:900;margin-bottom:12px}.role-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.role-btn,.pick-card{background:#fff9fc;border:2px solid #f0e3ed;border-radius:21px;min-height:97px;padding:11px 5px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:7px;color:#6d6470;font-weight:900;transition:.12s}.role-btn:hover,.pick-card:hover{border-color:#bda6ec;background:#fffaff}.role-btn.selected,.pick-card.selected,.chip.selected,.option-card.selected,.swatch.selected{background:#f2ebff;border-color:#9272df;box-shadow:0 0 0 2px #9476e129}.role-symbol{width:43px;height:43px;border-radius:14px;background:#fce4ee;display:grid;place-items:center;font-size:23px}.role-btn:nth-child(3n+2) .role-symbol{background:#e8e4ff}.role-btn:nth-child(3n) .role-symbol{background:#d9f5e9}.role-btn small{font-size:12px}.section-divider{height:1px;background:#f1eaf2;margin:21px 0}.family-count{font-size:13px;color:#9a90a0;margin-left:6px}.member-strip{display:flex;overflow-x:auto;gap:10px;padding:6px 1px 10px;scroll-snap-type:x proximity}.member-card{border:2px solid #efe8ef;background:white;border-radius:20px;min-width:104px;max-width:110px;padding:10px 6px;display:flex;align-items:center;flex-direction:column;gap:4px;color:#6f6576;font-weight:900;scroll-snap-align:start}.member-card.selected{border-color:#9172db;background:#f5f0ff}.member-card .doll-wrap{height:108px}.member-card .doll{transform:scale(.7);transform-origin:top center}.member-card b{font-size:12px}.member-card small{font-size:11px;color:#988d9c}.editor{border-radius:22px;background:#faf7ff;padding:18px;border:1px solid #ede3fa;margin-top:16px}.editor-header{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:12px}.editor-content{display:grid;grid-template-columns:135px minmax(0,1fr);gap:15px;align-items:center}.editor-preview{display:flex;align-items:center;justify-content:center;height:180px;background:#fff;border-radius:18px}.editor-controls{min-width:0}.field-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:12px}.field{min-width:0}.field label{font-weight:900;font-size:12px;color:#857a8f;display:block;margin-bottom:7px}.small-input,.small-select{min-height:42px;width:100%;border:2px solid #e9dff0;background:white;color:#574962;border-radius:13px;padding:7px 10px;font-size:13px}.swatches{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.swatch{width:38px;height:38px;border-radius:50%;padding:0;border:3px solid #fff;box-shadow:0 0 0 2px #eee2ed;background:var(--swatch)}.swatch.selected{box-shadow:0 0 0 3px #9272db}.swatch:focus-visible{outline-offset:5px}.tags{display:flex;gap:6px;flex-wrap:wrap}.tag{border-radius:30px;padding:6px 10px;font-size:12px;font-weight:900;color:#7958a6;background:#f1e7ff}.country-toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:16px 0}.country-search{max-width:255px;min-height:44px;font-size:14px}.chips{display:flex;gap:7px;overflow-x:auto;padding-bottom:5px}.chip{background:#f6f0fa;border:2px solid transparent;border-radius:999px;padding:10px 15px;color:#7b6c87;font-size:13px;font-weight:900;white-space:nowrap}.country-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;max-height:510px;overflow-y:auto;padding:2px 3px 10px}.country-card{background:#fff;border:2px solid #efe6ef;border-radius:21px;min-height:135px;padding:14px 9px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;color:#554b60;text-align:center}.country-card:hover{background:#fcf7ff;border-color:#c4acef}.country-card.selected{background:#f7f0ff;border-color:#9a79e0;box-shadow:0 0 0 2px #a787e72f}.flag{font-size:35px;line-height:1.1}.country-card b{font-size:15px}.country-card span:not(.flag){font-size:11px;color:#92899a}.country-footer{padding:14px;border-radius:18px;background:#f3fbf5;margin-top:13px;display:flex;justify-content:space-between;align-items:center;gap:12px}.selected-country{font-weight:900;font-size:15px}.selected-country span{display:block;color:#87918c;font-size:12px;font-weight:600;margin-top:4px}.counter{font-size:13px;color:#8e8298;font-weight:800}.dress-header{display:flex;align-items:center;justify-content:space-between;gap:12px}.progress-shell{height:12px;background:#f3eaf5;border-radius:100px;overflow:hidden;margin-top:12px}.progress-fill{height:100%;background:linear-gradient(90deg,#9e83e6,#e49ebd);width:0;transition:width .22s;border-radius:100px}.dress-area{display:grid;grid-template-columns:210px minmax(0,1fr);gap:16px;margin-top:16px}.big-stage{min-height:390px;border-radius:25px;background:linear-gradient(180deg,#f6e9ff 0%,#fff4ed 68%,#e6f7e7 68%,#d8f3d7 100%);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;position:relative;overflow:hidden;padding:18px}.big-stage .doll{transform:scale(1.3)}.big-stage .doll-wrap{height:216px}.big-stage strong{font-size:18px}.big-stage span{font-size:12px;color:#85758e;text-align:center}.dress-picks{min-width:0}.outfit-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.option-card{border:2px solid #ede4ed;border-radius:18px;background:#fff;padding:12px;min-height:84px;display:flex;gap:10px;align-items:center;text-align:left;color:#63556d}.option-card.selected{border-color:#9b7be5;background:#f6efff}.option-icon{height:48px;width:48px;flex:0 0 48px;border-radius:16px;background:linear-gradient(140deg,var(--outfit-color),#fff7f4);display:grid;place-items:center;color:#ffffff;font-size:24px;text-shadow:0 1px 5px #60506b77}.option-card strong{font-size:14px;display:block}.option-card small{font-size:11px;color:#9a8ca1}.dress-picks h3{margin:0 0 9px}.pet-info{background:#fff6da;border:1px solid #f2e5ae;border-radius:15px;padding:13px;color:#967a48;font-size:13px;margin-bottom:10px}.selected-description{padding:12px;border-radius:14px;background:#f5f9f5;color:#82718e;font-size:12px;line-height:1.6;margin-top:12px}.finish-wrap{background:#fdf7fb;border:1px dashed #e6cee8;border-radius:18px;padding:12px;margin-top:16px}.finish-wrap p{font-size:12px;color:#978c9a}.ending-stage{position:relative;background:linear-gradient(#bfeeff 0%,#effaff 61%,#d9eecb 61%,#c3dea4 100%);height:340px;border-radius:25px;overflow:hidden;margin:12px 0}.ending-stage:before{content:'☁';position:absolute;left:12%;top:12%;font-size:60px;color:#fff;opacity:.85;animation:cloud 12s linear infinite}.ending-stage:after{content:'☁';position:absolute;right:14%;top:5%;font-size:44px;color:#fff;opacity:.75;animation:cloud 15s linear infinite reverse}.sun{position:absolute;right:9%;top:14%;width:65px;height:65px;border-radius:50%;background:#ffe9a2;box-shadow:0 0 0 12px #ffe9a254,0 0 30px #ffe9a2aa}.ending-city{position:absolute;bottom:39%;left:0;right:0;text-align:center;color:#8cabc1;letter-spacing:.24em;font-weight:900;font-size:16px;opacity:.8}.parade{position:absolute;bottom:23px;left:0;width:max-content;min-width:100%;display:flex;gap:12px;align-items:flex-end;padding-left:30px;animation:parade var(--parade-duration,12s) ease-in-out infinite alternate}.parade-member{text-align:center;min-width:85px;display:flex;align-items:center;flex-direction:column}.parade-member .doll{animation:walk-bob .46s ease-in-out infinite alternate}.parade-member:nth-child(even) .doll{animation-delay:-.23s}.parade-name{font-size:11px;font-weight:900;white-space:nowrap;background:#ffffffdd;border-radius:15px;padding:4px 8px;margin-top:0;box-shadow:0 2px 6px #9daea33a}.story-box{background:#fff6df;border:2px solid #f5e7ba;border-radius:21px;padding:17px 20px;font-size:18px;line-height:1.65;font-weight:900;text-align:center;color:#675374;margin:14px 0}.story-box em{color:#8b68d9;font-style:normal}.story-caption{color:#998da1;font-size:12px;text-align:center}.ending-progress{height:6px;border-radius:100px;background:#eee4f0;overflow:hidden;margin-top:12px}.ending-progress div{height:100%;width:100%;background:#e4a3c9;transform-origin:left;animation:scene-duration 12s linear infinite}.ending-facts{display:flex;gap:9px;justify-content:center;flex-wrap:wrap}.fact{padding:9px 13px;border-radius:14px;background:#f5f0fe;font-weight:900;color:#846baf;font-size:13px}.floating-sticker{position:absolute;background:white;color:#9d70d0;padding:9px 14px;border-radius:16px;top:20px;left:22px;transform:rotate(-8deg);font-size:15px;font-weight:900;box-shadow:0 5px 11px #9476e119;z-index:2}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,25px);background:#4b3e5d;color:white;padding:13px 20px;border-radius:18px;font-size:14px;font-weight:800;opacity:0;pointer-events:none;transition:.18s;z-index:1000;max-width:90vw;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.notice{background:#fff7e5;padding:10px 14px;border-radius:12px;color:#997d48;font-size:12px;margin-top:10px;line-height:1.5}.empty-state{padding:20px;text-align:center;color:#978a9f;border:2px dashed #e9ddea;border-radius:17px;font-size:14px}.iconized{font-size:24px}.subtitle-text{font-size:14px;color:#8e8594}.safe-bottom{padding-bottom:env(safe-area-inset-bottom)}
-/* Image-free illustrated characters: each doll is composed entirely of CSS shapes. */
-.doll-wrap{width:100px;height:156px;display:flex;justify-content:center;align-items:flex-start;flex:0 0 auto;position:relative}.doll{position:relative;width:96px;height:154px;flex:none;--skin:#dfaf86;--hair:#55443a;--cloth:#d19ee0;--cloth-dark:#a474c4;--pants:#9fc3ec}.doll .hair-back{position:absolute;width:51px;height:64px;left:22px;top:4px;background:var(--hair);border-radius:24px 24px 18px 18px;z-index:1}.doll .head{position:absolute;left:26px;top:13px;width:44px;height:45px;border-radius:46% 46% 47% 47%;background:var(--skin);z-index:3;box-shadow:inset -3px -3px #00000007}.doll .hair-front{position:absolute;z-index:4;left:23px;top:7px;width:50px;height:19px;border-radius:24px 24px 12px 6px;background:var(--hair)}.doll.hair-long .hair-back{height:76px}.doll.hair-bob .hair-back{height:58px}.doll.hair-curl .hair-back{border-radius:50% 40%;box-shadow:-4px 4px var(--hair),5px 2px var(--hair)}.doll.hair-curl .hair-front{height:23px;border-radius:48% 50%;box-shadow:3px 3px var(--hair),-3px 3px var(--hair)}.doll.hair-up .hair-back{width:41px;left:29px;height:32px}.doll.hair-up .hair-front:after{content:'';position:absolute;background:var(--hair);width:24px;height:24px;border-radius:100%;left:20px;top:-14px}.doll.hair-bald .hair-back,.doll.hair-bald .hair-front{display:none}.doll .eye{position:absolute;background:#51414a;width:4px;height:5px;border-radius:100%;top:22px}.doll .eye.left{left:12px}.doll .eye.right{right:12px}.doll .cheek{position:absolute;background:#eb8b9b70;width:9px;height:5px;top:29px;border-radius:50%}.doll .cheek.left{left:4px}.doll .cheek.right{right:4px}.doll .mouth{position:absolute;border-bottom:2px solid #9b5b5c;width:10px;height:5px;left:17px;top:28px;border-radius:50%}.doll.face-wink .eye.right{height:2px;top:24px}.doll.face-happy .mouth{width:14px;left:15px;height:8px}.doll.face-calm .mouth{width:7px;left:18px;border-radius:0}.doll .neck{position:absolute;background:var(--skin);left:42px;top:54px;width:12px;height:16px;z-index:2}.doll .arm{position:absolute;background:var(--skin);width:14px;height:52px;top:70px;z-index:2;border-radius:13px}.doll .arm.left{left:14px;transform:rotate(11deg)}.doll .arm.right{right:14px;transform:rotate(-11deg)}.doll .leg{position:absolute;top:112px;left:30px;width:16px;height:37px;border-radius:2px 2px 7px 7px;background:var(--pants);z-index:2}.doll .leg.right{left:51px}.doll .shoe{position:absolute;top:142px;left:26px;height:8px;width:23px;background:#745f7e;border-radius:12px;z-index:3}.doll .shoe.right{left:49px}.doll .shirt{position:absolute;left:22px;top:66px;width:52px;height:56px;background:#fff;border-radius:15px 15px 8px 8px;border:2px solid #f0e9f0;z-index:3}.doll .shirt:after{content:'';position:absolute;top:-1px;left:18px;width:13px;height:8px;border-bottom:2px solid #ded6e4;border-radius:50%}.doll .costume{position:absolute;left:20px;top:63px;width:56px;height:74px;border-radius:15px 15px 9px 9px;background:linear-gradient(100deg,var(--cloth),var(--cloth-dark));z-index:5;border:2px solid #ffffff8a;box-shadow:inset 8px -5px #ffffff28}.doll .costume:before{content:'';position:absolute;left:25px;top:6px;width:3px;height:55px;background:#ffffff88;transform:rotate(10deg)}.doll .costume:after{content:'✧';position:absolute;left:9px;top:26px;font-size:22px;color:#ffffffa8}.doll .accessory{z-index:7;position:absolute;top:43px;right:2px;background:#fff3b7;color:#946e4e;border-radius:50%;border:2px solid white;width:26px;height:26px;display:grid;place-items:center;font-size:16px;transform:rotate(15deg)}.doll .doll-ground{position:absolute;bottom:0;height:7px;width:77px;background:#80708c15;border-radius:50%;left:10px}.doll.pet .hair-back,.doll.pet .hair-front,.doll.pet .neck,.doll.pet .leg,.doll.pet .shoe,.doll.pet .shirt,.doll.pet .costume,.doll.pet .arm,.doll.pet .head{display:none}.doll.pet .pet-body{position:absolute;width:64px;height:66px;background:var(--skin);border-radius:38% 42% 35% 35%;left:15px;top:74px;z-index:3}.doll.pet .pet-head{position:absolute;width:58px;height:55px;background:var(--skin);left:19px;top:39px;border-radius:45% 45% 49% 49%;z-index:4}.doll.pet .pet-ear{position:absolute;background:var(--skin);top:27px;width:23px;height:31px;border-radius:6px 18px 0 0;z-index:3;left:20px;transform:rotate(-25deg)}.doll.pet .pet-ear.right{left:54px;transform:rotate(25deg);border-radius:18px 6px 0 0}.doll.pet.cat .pet-ear{clip-path:polygon(0 0,100% 38%,100% 100%,0 100%)}.doll.pet.cat .pet-ear.right{clip-path:polygon(100% 0,100% 100%,0 100%,0 40%)}.doll.pet .pet-eye{position:absolute;z-index:5;width:6px;height:6px;border-radius:50%;background:#443f4e;top:62px;left:34px}.doll.pet .pet-eye.right{left:58px}.doll.pet .pet-nose{position:absolute;z-index:5;background:#ad788a;width:8px;height:6px;top:74px;left:44px;border-radius:40% 40% 70% 70%}.doll.pet .pet-paw{position:absolute;z-index:5;background:var(--skin);width:18px;height:26px;left:22px;top:117px;border-radius:15px}.doll.pet .pet-paw.right{left:57px}.doll.pet .pet-tail{position:absolute;z-index:1;top:91px;right:0;width:35px;height:39px;border:12px solid var(--skin);border-bottom:0;border-left:0;border-radius:0 34px 0 0;transform:rotate(10deg)}.doll.pet .pet-collar{position:absolute;z-index:6;width:51px;height:11px;top:92px;left:23px;border-radius:4px;background:var(--cloth)}.doll.pet .accessory{top:91px;right:13px}.doll.pet.face-wink .pet-eye.right{height:2px;top:64px}.doll.pet.face-happy .pet-nose:after{content:'';width:12px;height:7px;position:absolute;left:-2px;top:5px;border-bottom:2px solid #98607a;border-radius:50%}
-@keyframes cloud{0%{transform:translateX(-20px)}100%{transform:translateX(40px)}}@keyframes parade{0%{transform:translateX(0)}100%{transform:translateX(calc(-1 * var(--parade-shift,0px)))}}@keyframes walk-bob{from{transform:translateY(0) rotate(-2deg)}to{transform:translateY(-10px) rotate(3deg)}}@keyframes scene-duration{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}
-@media(min-width:1400px){.workspace{grid-template-columns:minmax(0,1fr) 295px}.panel{padding:30px}.family-panel{padding:20px}}
-@media(max-width:1080px){.app-shell{padding:14px}.workspace{grid-template-columns:minmax(0,1fr) 220px;gap:12px}.panel{padding:20px}.country-grid{grid-template-columns:repeat(3,1fr)}.role-grid{grid-template-columns:repeat(5,1fr)}.family-panel{padding:13px}.dress-area{grid-template-columns:185px 1fr}.option-icon{width:40px;flex-basis:40px}.option-card{padding:9px}.welcome{grid-template-columns:1fr 200px}}
-@media(max-width:740px){.workspace{grid-template-columns:1fr}.family-panel{position:static;order:-1}.family-mini-grid{display:flex;max-height:125px;overflow-x:auto}.family-mini{min-width:95px}.family-mini .doll-wrap{height:65px}.family-mini .doll{transform:scale(.42)}.app-shell{padding:10px}.topbar{align-items:center}.top-actions{flex-direction:column}.step{font-size:11px;min-width:100px}.panel{padding:16px;min-height:0}.welcome{grid-template-columns:1fr}.welcome-art{display:none}.role-grid{grid-template-columns:repeat(3,1fr)}.country-grid{grid-template-columns:repeat(2,1fr);max-height:450px}.editor-content{grid-template-columns:1fr}.editor-preview{height:155px}.dress-area{grid-template-columns:1fr}.big-stage{min-height:240px}.big-stage .doll-wrap{height:175px}.big-stage .doll{transform:scale(1)}.outfit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.story-box{font-size:15px}.brand-sub{display:none}}
-@media(max-width:425px){.field-row{grid-template-columns:1fr}.outfit-grid{grid-template-columns:1fr}.role-grid{grid-template-columns:repeat(2,1fr)}.country-card{min-height:112px}.primary-actions{align-items:stretch;flex-direction:column}.primary-actions .btn{width:100%}.brand-mark{width:44px;height:44px;border-radius:13px}.brand-name{font-size:17px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+:root{--ink:#554b65;--muted:#98899b;--pink:#fbadc5;--rose:#ef7fa5;--peach:#ffe5d5;--cream:#fffaf2;--mint:#d9efe5;--line:#f1e5e9;--shadow:0 14px 45px #75576a18;--font:'Arial Rounded MT Bold','Apple SD Gothic Neo','Malgun Gothic',sans-serif}
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0}body{font-family:var(--font);color:var(--ink);background:linear-gradient(130deg,#fff1ed,#fffaf4 45%,#f6f1ff);overflow:hidden;-webkit-tap-highlight-color:transparent}button,input{font-family:inherit}button{border:0;cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid #d999c8;outline-offset:3px}button:active{transform:scale(.96)}img{user-select:none;-webkit-user-drag:none;pointer-events:none}#app{width:100%;height:100%;max-width:1600px;margin:auto;position:relative;overflow:hidden}h1,h2,h3,p{margin:0}.screen{display:none;width:100%;height:100%;min-height:0}.screen.active{display:flex}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.pill{border-radius:999px;background:#fff;padding:11px 18px;box-shadow:0 3px 13px #735e6a12}.primary{background:linear-gradient(110deg,#f49db9,#ed81a5);color:white;border-radius:24px;box-shadow:0 9px 0 #e58baa35,0 14px 24px #eb9faf40;font-size:22px;padding:17px 32px;white-space:nowrap}.round{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;width:48px;height:48px;background:#fff9fa;border:2px solid #f6e3e9;color:#816776;font-size:24px;flex-shrink:0}.small-icon{font-size:20px}.fluffy{border-radius:32px;background:#fff;box-shadow:var(--shadow);border:1px solid #fff8}.heart{color:#ff94b0}.app-chrome{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px 10px;flex-shrink:0}.brand{display:flex;gap:8px;align-items:center;font-size:clamp(19px,2.1vw,28px);color:#815979;white-space:nowrap}.dot{width:10px;height:10px;background:#ffc1a0;border-radius:50%;display:inline-block;vertical-align:middle}.chip{background:#fff;border:1px solid #f5e8ed;color:#7c6977;border-radius:999px;padding:10px 17px;box-shadow:0 3px 12px #77566c0c;font-size:15px;white-space:nowrap}.stepcount{color:#ba8ca3;font-size:14px}.big-check{font-size:20px}
+/* Landing */
+#landing{align-items:center;justify-content:center;background:radial-gradient(circle at 14% 30%,#ffe0e7 0,transparent 29%),radial-gradient(circle at 84% 15%,#e3f4e9 0,transparent 27%),radial-gradient(circle at 74% 78%,#e9e0ff 0,transparent 33%);position:relative}.floaty{position:absolute;pointer-events:none;opacity:.7;filter:drop-shadow(0 8px 0 #ffffff55);animation:bob 4s ease-in-out infinite}.floaty:nth-child(even){animation-delay:-1.8s}.landing-wrap{text-align:center;width:min(88%,720px);position:relative;z-index:2}.landing-star{font-size:clamp(55px,11vh,110px);filter:drop-shadow(0 8px 0 #ffa6b846);margin:0 0 16px}.landing-title{font-size:clamp(46px,7.5vw,88px);line-height:1.15;color:#785471;text-shadow:3px 6px 0 #fff,0 12px 25px #eed5da}.landing-title span{color:#ef8eae}.landing-desc{margin:22px 0 34px;color:#b38da2;font-size:clamp(17px,2.4vw,25px)}.start{font-size:clamp(24px,3vw,34px);padding:20px 58px;border-radius:30px}.orbit{display:flex;justify-content:center;gap:22px;margin:35px auto 0;font-size:45px}.orbit span{padding:12px;background:#ffffffa6;border-radius:26px;transform:rotate(-6deg);box-shadow:0 4px 10px #d9a5ba1a}.orbit span:nth-child(even){transform:rotate(7deg)}@keyframes bob{50%{transform:translateY(-13px) rotate(10deg)}}
+/* Family setup */
+#family{flex-direction:column;background:linear-gradient(130deg,#fff6f0,#fffaf6 44%,#f4f3ff)}.family-layout{display:grid;grid-template-columns:minmax(0,1.27fr) minmax(300px,.73fr);gap:16px;padding:0 18px 17px;min-height:0;flex:1}.panel{padding:19px;min-height:0;overflow:auto;scrollbar-width:thin}.family-left{display:flex;flex-direction:column;gap:14px}.family-head{display:flex;justify-content:space-between;align-items:center;gap:12px}.family-head h2{font-size:clamp(23px,2.7vw,34px);color:#815b78}.family-head p{font-size:14px;color:var(--muted)}.input-wrap{display:flex;align-items:center;gap:13px;background:#fff7f6;border:2px solid #f6e3e8;border-radius:20px;padding:10px 15px;font-size:18px}.input-wrap input{background:transparent;border:0;outline:none;min-width:0;flex:1;font-size:20px;color:#6c5269}.role-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px;flex:1;min-height:0}.role-card{background:linear-gradient(150deg,#fff9fb,#fff5f2);border:2px solid #f6e6e9;border-radius:23px;padding:10px 5px;display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:102px;gap:5px;color:#7a6272;font-size:clamp(13px,1.6vw,18px)}.role-card:hover{background:#ffedf3;border-color:#efb9c8}.role-emoji{font-size:clamp(29px,5.1vh,49px)}.family-right{display:flex;flex-direction:column;gap:14px}.type-banner{display:flex;align-items:center;justify-content:space-between;background:#f5fff9;border:2px solid #dcefe4;padding:15px;border-radius:21px}.type-banner strong{font-size:21px;color:#62947e}.type-banner small{color:#7eac96;font-size:12px;display:block}.member-list{display:flex;flex-wrap:wrap;align-content:flex-start;gap:10px;overflow:auto;flex:1;min-height:70px}.person-pill{display:flex;gap:9px;align-items:center;border-radius:17px;background:#fff7f8;border:2px solid #f8e5e9;padding:6px 7px 6px 13px;font-size:17px}.person-pill input{border:0;background:transparent;width:75px;max-width:75px;font-size:15px;color:#7c6073}.person-pill button{background:#fff;border-radius:50%;font-size:15px;color:#c18da1;width:28px;height:28px}.empty-family{color:#c5a9b4;text-align:center;width:100%;align-self:center;font-size:18px;line-height:2}.family-bottom{display:flex;align-items:center;justify-content:space-between;gap:14px}.preset-row{display:flex;gap:8px;flex-wrap:wrap}.preset{font-size:14px;border-radius:999px;color:#a77d95;background:#fff1f5;padding:9px 11px}.disabled{opacity:.45;filter:grayscale(.2);pointer-events:none}
+/* Dressing */
+#dress{flex-direction:column}.dress-head{padding:9px 17px 7px}.nav-center{display:flex;gap:8px;align-items:center;min-width:0;flex:1;justify-content:center}.family-mini{display:flex;gap:7px;align-items:center;background:#fff;border-radius:99px;border:1px solid #f4e7e9;padding:7px 12px;font-size:14px}.country-strip{display:flex;align-items:center;gap:9px;overflow:auto;padding:2px 18px 12px;flex-shrink:0;scrollbar-width:none}.country-strip::-webkit-scrollbar{display:none}.country-button{padding:10px 16px;border:2px solid #f6e7e8;background:#fff;color:#9c8395;border-radius:18px;font-size:17px;white-space:nowrap;flex:0 0 auto}.country-button.active{border-color:#f2a4bc;background:#ffeef3;color:#a2587a;box-shadow:0 4px 10px #f2bbc03a}.dress-main{display:grid;grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);min-height:0;flex:1;gap:13px;padding:0 16px 11px}.stage-panel{position:relative;min-height:0;overflow:hidden;background:radial-gradient(circle at 50% 48%,#fff 0%,#fffaf8 48%,#fff1ef 100%);border-radius:28px;border:2px solid #fff;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center}.stage-flower{position:absolute;font-size:30px;opacity:.32;pointer-events:none}.stage-name{position:absolute;z-index:7;top:12px;left:15px;background:#ffffffdc;border-radius:99px;padding:8px 16px;font-size:19px;color:#986f8d;box-shadow:0 4px 15px #ddd1db33}.stage-zone{position:relative;min-height:0;flex:1;aspect-ratio:2/3;max-height:calc(100% - 66px);width:auto;max-width:100%;margin:auto;overflow:visible;touch-action:none;isolation:isolate}.stage-layer{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:fill;user-select:none;pointer-events:none}.stage-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;opacity:.6;gap:8px;color:#c29eb3;font-size:16px}.stage-placeholder span{font-size:100px}.member-strip{z-index:8;display:flex;gap:7px;justify-content:center;align-items:center;overflow:auto;max-width:100%;padding:6px 12px 12px;flex-shrink:0;scrollbar-width:none}.member-strip::-webkit-scrollbar{display:none}.member-btn{white-space:nowrap;background:#fff;border:2px solid #f5e4e8;border-radius:16px;color:#9a8192;padding:7px 11px;font-size:14px;display:flex;align-items:center;gap:4px}.member-btn.active{background:#ffdfeb;border-color:#ee9db8;color:#915274}.member-btn .small-emoji{font-size:22px}.wardrobe-panel{overflow:hidden;min-height:0;display:flex;flex-direction:column;background:#fff;border-radius:28px;box-shadow:var(--shadow);border:1px solid #fff8}.wardrobe-tabs{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;padding:10px;background:#fff9f8;flex-shrink:0}.tab{background:transparent;border-radius:15px;color:#b39ba8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;padding:7px 0;font-size:14px}.tab .icon{font-size:28px;line-height:1.15}.tab.active{background:#ffe6ef;color:#a65c83}.wardrobe-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:minmax(110px,1fr);gap:9px;padding:11px;overflow-y:auto;min-height:0;flex:1;align-content:start;overscroll-behavior:contain}.item-card{display:flex;align-items:center;justify-content:center;position:relative;border:2px solid #f7edf0;border-radius:21px;background:linear-gradient(155deg,#fffafa,#fff5f7);min-height:110px;touch-action:none;overflow:hidden;user-select:none}.item-card.selected{background:#ffeaf1;border-color:#efa3bd;box-shadow:inset 0 0 0 2px #fff}.item-card img{width:100%;height:100%;max-height:210px;object-fit:contain;pointer-events:none}.item-card .selected-star{position:absolute;right:8px;top:6px;color:#e98daa;font-size:25px}.item-card .none-item{font-size:50px;opacity:.5}.item-card .swatch-strip{position:absolute;bottom:7px;width:34px;height:5px;border-radius:7px;opacity:.55}.wardrobe-footer{display:flex;justify-content:space-between;gap:10px;padding:9px 12px;border-top:1px solid #fbf0f2;flex-shrink:0}.wardrobe-footer button{flex:1;background:#f8f0f3;color:#936e83;font-size:15px;padding:11px 7px;border-radius:15px}.wardrobe-footer .next{background:#f5a8bf;color:#fff}.wardrobe-footer .finish{background:#87c9b6;color:#fff}.skin-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(115px,1fr);gap:12px;align-content:center;padding:16px}.skin-card{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;border-radius:22px;background:#fff9f9;border:3px solid #f4e5ea;color:#947688;font-size:19px}.skin-card.active{border-color:#ef9fb6;background:#fff0f5}.skin-circle{border-radius:50%;width:65px;height:65px;border:4px solid #fff;box-shadow:0 4px 10px #44331a16}.ghost{position:fixed;z-index:9999;pointer-events:none;width:120px;height:125px;object-fit:contain;filter:drop-shadow(0 7px 9px #50304455);transform:translate(-50%,-50%) scale(1.1)}.drop-ready{box-shadow:inset 0 0 0 5px #efa2bf,0 10px 30px #e4a5c04d}.no-assets{margin:auto;text-align:center;font-size:19px;color:#be9aab;line-height:1.7;padding:14px}.no-assets span{font-size:50px;display:block}
+/* final picture */
+#result{flex-direction:column;background:radial-gradient(circle at 4% 10%,#fff1d7,transparent 30%),linear-gradient(120deg,#fff4ed,#f3f1ff)}.result-body{flex:1;min-height:0;padding:0 18px 15px;display:flex;flex-direction:column;gap:12px}.result-frame{width:100%;flex:1;min-height:0;position:relative;border:13px solid white;border-radius:28px;background:linear-gradient(165deg,#d8eff2,#fff9e9);box-shadow:var(--shadow);overflow:hidden;display:flex;justify-content:center;align-items:center}.result-frame canvas{width:100%;height:100%;object-fit:contain}.result-caption{position:relative;background:white;border-radius:24px;padding:15px 24px;text-align:center;box-shadow:0 7px 25px #8f688716;color:#8e6681;font-size:clamp(17px,2.6vw,28px);line-height:1.35}.result-actions{display:flex;align-items:center;justify-content:space-between;gap:14px}.result-actions button{font-size:18px;padding:12px 20px;border-radius:17px}.save{background:#fff;color:#8d7084}.replay{background:#ee9fbb;color:#fff}.toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:10000;padding:12px 25px;background:#715468;color:white;border-radius:30px;box-shadow:0 12px 30px #0003;font-size:17px;pointer-events:none;opacity:0;transition:opacity .24s}.toast.show{opacity:1}
+@media (max-width:900px){.family-layout{grid-template-columns:1.12fr .88fr}.family-left,.family-right{padding:14px}.role-grid{gap:6px}.role-card{min-height:86px;border-radius:16px;font-size:13px}.role-emoji{font-size:35px}.dress-main{grid-template-columns:.94fr 1.06fr;gap:8px;padding:0 9px 9px}.wardrobe-grid{gap:6px;padding:7px;grid-auto-rows:minmax(104px,1fr)}.wardrobe-tabs{padding:6px}.country-strip{padding-left:9px}.tab .icon{font-size:22px}.tab{font-size:12px}.app-chrome{padding:9px 12px}.stage-name{font-size:15px}.member-btn{font-size:12px;padding:6px 8px}}
+@media (max-width:650px){.family-layout{display:flex;flex-direction:column;overflow:auto}.family-left{min-height:360px;overflow:visible;flex:none}.family-right{min-height:220px;flex:none;overflow:visible}.role-card{min-height:85px}.dress-head{gap:4px}.nav-center{justify-content:flex-end}.family-mini{display:none}.brand{font-size:18px}.country-button{padding:8px 13px;font-size:15px}.dress-main{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}.wardrobe-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.tab .icon{font-size:19px}.tab{font-size:10px}.stage-zone{max-height:calc(100% - 54px)}.member-strip{padding:4px 5px 6px}.member-btn{font-size:11px}.member-btn .small-emoji{font-size:15px}}
+@media (max-height:620px){.landing-star{font-size:56px}.landing-title{font-size:54px}.landing-desc{margin:10px 0 16px}.orbit{margin:18px auto 0}.role-card{min-height:64px}.stage-zone{max-height:calc(100% - 43px)}.wardrobe-grid{grid-auto-rows:minmax(92px,1fr)}.item-card{min-height:92px}.result-caption{padding:9px 18px}.result-frame{border-width:8px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 
-/* Keep all three sample dolls within the narrow welcome arch. */
-.welcome-art .doll-wrap{width:74px;flex:0 0 74px;height:156px;align-items:flex-end}
-.welcome-art .doll-wrap:nth-child(1) .doll{transform:scale(.78) rotate(-6deg);transform-origin:center bottom}
-.welcome-art .doll-wrap:nth-child(2) .doll{transform:scale(.84) rotate(3deg);transform-origin:center bottom}
-.welcome-art .doll-wrap:nth-child(3) .doll{transform:scale(.73) rotate(7deg);transform-origin:center bottom}
-
-/* Face shape selection is independent from hairstyle and facial expression. */
-.doll.shape-oval .head{border-radius:43% 43% 48% 48%;height:50px;width:40px;left:28px}
-.doll.shape-square .head{border-radius:14px 14px 11px 11px}
-.doll.shape-heart .head{border-radius:48% 48% 62% 62%;width:46px;left:25px}
-.doll.pet.shape-oval .pet-head{height:60px;width:52px;left:22px}
-.doll.pet.shape-square .pet-head{border-radius:16px}
-.doll.pet.shape-heart .pet-head{border-radius:48% 48% 70% 70%}
-.parade-member .doll:not(.pet) .leg{animation:human-step .45s ease-in-out infinite alternate;transform-origin:50% 0}
-.parade-member .doll:not(.pet) .leg.right{animation-direction:alternate-reverse}
-.parade-member .doll.pet .pet-paw{animation:pet-step .45s ease-in-out infinite alternate;transform-origin:50% 0}
-.parade-member .doll.pet .pet-paw.right{animation-direction:alternate-reverse}
-@keyframes human-step{from{transform:rotate(-13deg)}to{transform:rotate(15deg)}}
-@keyframes pet-step{from{transform:rotate(-9deg)}to{transform:rotate(10deg)}}
-
+#resultCountry{font-size:24px;min-width:130px;text-align:center}
+/* v2: visual-first iPad layout with big icons, compact text, family-wide country picker */
+.family-layout{grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:12px;padding:0 14px 12px}
+.family-left,.family-right{padding:13px 15px;gap:9px}
+.family-head h2{font-size:clamp(20px,2.35vw,28px)}.family-head p{font-size:12px}
+.country-pick-title{display:flex;align-items:center;gap:7px;color:#99718d;font-size:18px;flex-shrink:0}
+.country-pick-title span{font-size:12px;color:#bda5b3;margin-left:auto}
+.family-country-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;flex-shrink:0}
+.family-country-button{min-width:0;min-height:91px;border-radius:19px;border:2px solid #f4e5e8;background:#fff8f7;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;color:#947787;padding:5px 1px}
+.family-country-button.active{background:#fff0f5;border:3px solid #eaa5ba;box-shadow:0 4px 12px #edbdce50}
+.flag-emoji{font-size:clamp(36px,4.8vw,59px);line-height:1.2;filter:drop-shadow(0 3px 3px #57485815)}.flag-text{font-size:clamp(11px,1.15vw,15px)}
+.role-grid{gap:8px;grid-auto-rows:1fr}.role-card{min-height:95px;padding:4px 2px;gap:3px;border-radius:20px;font-size:clamp(12px,1.4vw,17px)}
+.role-emoji{font-size:clamp(56px,7.3vh,94px);line-height:1.16;filter:drop-shadow(0 4px 2px #a77d8917)}
+.input-wrap{padding:6px 11px;border-radius:16px;font-size:16px}.input-wrap input{font-size:18px}
+.preset-row{gap:4px;align-items:center}.preset{font-size:12px;padding:7px 9px}.assets-import{background:#fff9ea;color:#aa9371}
+.family-right .person-pill{padding:5px 6px;gap:5px}.type-banner{padding:10px}.type-banner strong{font-size:20px}
+.dress-country-label{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;background:#fff6fa;border:2px solid #f1dce7;border-radius:15px;padding:3px 14px;color:#98708a;font-size:12px;line-height:1.15;min-width:83px}
+.dress-flag{font-size:36px;line-height:1.2}.dress-main{grid-template-columns:minmax(0,.91fr) minmax(0,1.09fr);gap:10px}
+.wardrobe-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows: minmax(165px,1fr);gap:8px;padding:9px}
+.item-card{min-height:165px;border-radius:19px}.item-card img{max-height:none}.item-card .swatch-strip{bottom:6px;opacity:.85;width:44px;height:7px}
+.preview-frame{width:100%;height:100%;display:block;position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.preview-cropped{position:absolute!important;inset:3%!important;width:94%!important;height:94%!important;object-fit:contain!important}
+.preview-fallback{position:absolute!important;max-width:none!important;max-height:none!important;object-fit:fill!important;transform:none!important}
+/* These offsets crop ONLY thumbnails. Stage images remain fixed on the 1024 x 1536 coordinate grid. */
+.preview-fallback.fallback-top{width:127%!important;height:190.5%!important;left:-13.5%;top:-32%}
+.preview-fallback.fallback-bottom{width:136%!important;height:204%!important;left:-18%;top:-89%}
+.preview-fallback.fallback-shoes{width:168%!important;height:252%!important;left:-34%;top:-155%}
+.preview-fallback.fallback-hair{width:205%!important;height:307.5%!important;left:-52.5%;top:-1%}
+.skin-circle{width:92px;height:92px}.skin-grid{grid-auto-rows:minmax(155px,1fr)}.skin-card{min-height:155px}.skin-card span:last-child{font-size:29px}
+.tab .icon{font-size:33px}.tab{font-size:13px}.member-btn .small-emoji{font-size:28px}
+@media (max-width:1100px){.family-country-button{min-height:78px}.flag-emoji{font-size:43px}.role-emoji{font-size:clamp(54px,7vh,75px)}.role-card{min-height:88px}.family-left,.family-right{padding:11px}.wardrobe-grid{grid-auto-rows:minmax(140px,1fr)}.item-card{min-height:140px}}
+@media (max-width:820px){.family-layout{grid-template-columns:minmax(0,1.24fr) minmax(240px,.76fr)}.family-country-grid{grid-template-columns:repeat(4,1fr)}.family-country-button{min-height:57px;flex-direction:row;gap:3px}.flag-emoji{font-size:33px}.role-emoji{font-size:55px}.role-card{min-height:75px}.family-head p,.country-pick-title span{display:none}.wardrobe-grid{grid-auto-rows:minmax(120px,1fr)}.item-card{min-height:120px}.dress-flag{font-size:28px}.brand{font-size:18px}}
+@media (max-height:650px){.family-country-button{min-height:61px}.flag-emoji{font-size:35px}.role-emoji{font-size:55px}.role-card{min-height:67px}.country-pick-title{font-size:14px}.family-left,.family-right{gap:6px}.wardrobe-grid{grid-auto-rows:minmax(112px,1fr)}.item-card{min-height:112px}}
+/* v3: 머리 미리보기만 조금 줄입니다. 캐릭터 위 합성 좌표는 그대로 유지. */
+.item-card.hair-card .preview-frame{transform:scale(.79);transform-origin:center center}
+.skin-card{gap:0}.skin-circle{width:min(100px,58%);height:auto;aspect-ratio:1}
+/* 첫 번째 색상: 원본 이미지를 그대로 두고 작은 원본 표시만 둡니다. */
+.item-card[data-num="0"]:not(:has(.none-item)){background:linear-gradient(145deg,#fffaf6,#fff5f1)}
 </style>
 </head>
 <body>
-  <div id="app" aria-live="off"></div>
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  <noscript><div class="noscript">이 게임을 하려면 자바스크립트를 켜 주세요.</div></noscript>
-<script>window.__GAME_SINGLE_FILE=true;</script>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+ <defs><filter id="skinWarm" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
+ <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  9 -9 0 0 -0.36" result="redDiff"/>
+ <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 8 -8 0 -0.22" result="yellowDiff"/>
+ <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 1 1 0 -1.15" result="bright"/>
+ <feComposite in="redDiff" in2="yellowDiff" operator="in" result="warm"/>
+ <feComposite in="warm" in2="bright" operator="in" result="skinMask"/>
+ <feColorMatrix in="SourceGraphic" type="matrix" values="0.95 0 0 0 0  0 0.82 0 0 0  0 0 0.74 0 0  0 0 0 1 0" result="tone"/>
+ <feComposite in="tone" in2="skinMask" operator="in" result="tinted"/>
+ <feComposite in="tinted" in2="SourceGraphic" operator="over"/>
+ </filter><filter id="skinTan" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
+ <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  9 -9 0 0 -0.36" result="redDiff"/>
+ <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 8 -8 0 -0.22" result="yellowDiff"/>
+ <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 1 1 0 -1.15" result="bright"/>
+ <feComposite in="redDiff" in2="yellowDiff" operator="in" result="warm"/>
+ <feComposite in="warm" in2="bright" operator="in" result="skinMask"/>
+ <feColorMatrix in="SourceGraphic" type="matrix" values="0.81 0 0 0 0  0 0.65 0 0 0  0 0 0.55 0 0  0 0 0 1 0" result="tone"/>
+ <feComposite in="tone" in2="skinMask" operator="in" result="tinted"/>
+ <feComposite in="tinted" in2="SourceGraphic" operator="over"/>
+ </filter><filter id="skinDeep" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
+ <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  9 -9 0 0 -0.36" result="redDiff"/>
+ <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 8 -8 0 -0.22" result="yellowDiff"/>
+ <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 1 1 0 -1.15" result="bright"/>
+ <feComposite in="redDiff" in2="yellowDiff" operator="in" result="warm"/>
+ <feComposite in="warm" in2="bright" operator="in" result="skinMask"/>
+ <feColorMatrix in="SourceGraphic" type="matrix" values="0.56 0 0 0 0  0 0.44 0 0 0  0 0 0.37 0 0  0 0 0 1 0" result="tone"/>
+ <feComposite in="tone" in2="skinMask" operator="in" result="tinted"/>
+ <feComposite in="tinted" in2="SourceGraphic" operator="over"/>
+ </filter></defs></svg>
+<div id="app">
+<!-- 1. Start -->
+<section id="landing" class="screen active" aria-label="시작 화면">
+  <span class="floaty" style="left:7%;top:14%;font-size:72px">🌸</span><span class="floaty" style="right:8%;top:20%;font-size:62px">🌼</span><span class="floaty" style="left:12%;bottom:13%;font-size:48px">✨</span><span class="floaty" style="right:11%;bottom:13%;font-size:67px">🦋</span>
+  <div class="landing-wrap"><div class="landing-star">👨‍👩‍👧‍👦</div><h1 class="landing-title">나만의 가족<br><span>옷입히기</span></h1><p class="landing-desc">우리 가족과 떠나는 세계 전통의상 여행</p><button class="primary start" id="startBtn">🌈 게임 시작</button><div class="orbit"><span>👘</span><span>🌷</span><span>🥻</span><span>🎀</span></div></div>
+</section>
+<!-- 2. Build family -->
+<section id="family" class="screen" aria-label="가족 구성하기">
+  <header class="app-chrome"><div class="brand">🌷 나만의 가족 옷입히기</div><span class="chip">1 / 3 &nbsp; 우리 가족 만들기</span></header>
+  <div class="family-layout">
+    <div class="fluffy panel family-left"><div class="family-head"><h2>💕 어떤 가족을 만들까?</h2><p>가족을 톡톡 눌러 줘요!</p></div>
+      <label class="input-wrap"><span>✏️ 내 이름</span><input id="ownerName" maxlength="15" placeholder="이름을 써 주세요" autocomplete="off" value=""></label>
+      <div class="country-pick-title">🌏 <strong>어디로 여행 갈까?</strong><span>가족 모두 같은 옷을 입어요</span></div>
+      <nav id="familyCountryGrid" class="family-country-grid" aria-label="가족 여행 나라 선택"></nav>
+      <div id="roleGrid" class="role-grid" aria-label="가족 구성원 추가"></div>
+      <div class="preset-row"><button id="assetsImport" class="preset assets-import" aria-label="PNG 폴더 불러오기">🗂️ 그림 불러오기</button><input id="assetFolder" type="file" accept="image/png" multiple webkitdirectory hidden><button class="preset" data-preset="nuclear">👨‍👩‍👧‍👦 4명 가족</button><button class="preset" data-preset="single">👩‍👧 한부모 가족</button><button class="preset" data-preset="extended">👵👴 대가족</button><button class="preset" data-preset="clear">↺ 다시 만들기</button></div>
+    </div>
+    <div class="fluffy panel family-right"><div class="family-head"><h2>🏡 우리 가족</h2><p id="memberCount">0명</p></div><div class="type-banner"><span><small>우리 가족의 모습</small><strong id="familyType">가족을 골라 주세요</strong></span><span style="font-size:40px">💐</span></div><div class="member-list" id="memberList"><p class="empty-family">여기에 가족이 모일 거예요 🌼</p></div><div class="family-bottom"><span style="font-size:14px;color:#b79ba8">최대 12명</span><button id="familyNext" class="primary disabled">옷 입히러 가기 ➜</button></div></div>
+  </div>
+</section>
+<!-- 3. Dress up -->
+<section id="dress" class="screen" aria-label="옷 입히기">
+  <header class="app-chrome dress-head"><div class="brand">🌷 옷입히기</div><button id="dressCountryLabel" class="dress-country-label" aria-label="여행 국가 변경하려면 가족 화면으로 이동">🇰🇷 한국</button><div class="nav-center"><span id="familyChip" class="family-mini">👨‍👩‍👧‍👦 우리 가족</span><button id="dressFinish" class="primary" style="font-size:16px;padding:11px 17px;border-radius:17px">📸 가족사진</button></div></header>
+  
+  <div class="dress-main">
+    <section class="stage-panel" id="stagePanel"><span class="stage-flower" style="left:5%;top:10%">✿</span><span class="stage-flower" style="right:8%;top:33%">✦</span><span class="stage-flower" style="left:7%;bottom:12%">🌼</span><div class="stage-name" id="stageName">우리 가족</div>
+      <div class="stage-zone" id="stageZone" aria-label="의상을 여기에 놓으세요">
+        <img id="layerBase" class="stage-layer" style="z-index:0" alt="기본 캐릭터"><img id="layerShoes" class="stage-layer" style="z-index:1" alt="신발"><img id="layerBottom" class="stage-layer" style="z-index:2" alt="하의"><img id="layerTop" class="stage-layer" style="z-index:3" alt="상의"><img id="layerHair" class="stage-layer" style="z-index:4" alt="머리">
+        
+      </div><nav id="memberStrip" class="member-strip" aria-label="가족 구성원 선택"></nav>
+    </section>
+    <aside class="wardrobe-panel"><div class="wardrobe-tabs" id="tabs"></div><div class="wardrobe-grid" id="wardrobeGrid"></div><div class="wardrobe-footer"><button id="previousMember">◀ 이전</button><button class="next" id="nextMember">다음 친구 ▶</button><button class="finish" id="takePicture">📸 완성!</button></div></aside>
+  </div>
+</section>
+<!-- 4. Result -->
+<section id="result" class="screen" aria-label="가족 사진">
+  <header class="app-chrome"><div class="brand">🌸 우리 가족의 여행 사진</div><span class="chip" id="resultCountry">🇰🇷 한국</span></header>
+  <div class="result-body"><div class="result-frame"><canvas id="photoCanvas" width="1600" height="860" aria-label="가족사진"></canvas></div><p class="result-caption" id="resultCaption">우리 가족의 즐거운 여행!</p><div class="result-actions"><button class="save" id="savePicture">💾 사진 저장</button><button class="replay" id="backToDress">🎀 다시 옷 입히러 가기 ➜</button></div></div>
+</section>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</div>
 <script>
-/*
- * Traditional clothing education sample catalog.
- * Names are examples, not a claim that one garment represents everyone in a country.
- * Regional / community-specific examples are identified in notes.
- * Future illustrators can add an asset URL per outfit without changing game flow.
- */
-const rawCountries = [
-  // Asia
-  ['KR','대한민국','서울','아시아','🇰🇷','한복 치마저고리|한복 바지저고리|두루마기|당의','노리개|갓|댕기','여러 한복 형태 가운데 예시를 모았어요.'],
-  ['JP','일본','도쿄','아시아','🇯🇵','기모노|유카타|하카마|하오리','오비 띠|부채|머리장식','유카타는 여름 행사에서도 볼 수 있어요.'],
-  ['CN','중국','베이징','아시아','🇨🇳','한푸|치파오|탕좡','비녀|부채|자수 주머니','지역과 시대에 따라 의상 문화가 다양해요.'],
-  ['VN','베트남','하노이','아시아','🇻🇳','아오자이|아오뜨턴|아오바바','논라|부채|머리띠','아오바바는 베트남 남부 지역의 의복이에요.'],
-  ['TH','태국','방콕','아시아','🇹🇭','쭛타이|쫑끄라벤|씬','사바이|머리장식|전통 허리띠','태국의 전통 복식에는 다양한 형태가 있어요.'],
-  ['IN','인도','뉴델리','아시아','🇮🇳','사리|쿠르타|레헹가|셰르와니','두파타|팔찌|장식 목걸이','지역마다 서로 다른 복식 문화가 있어요.'],
-  ['PK','파키스탄','이슬라마바드','아시아','🇵🇰','샬와르 카미즈|쿠르타 파자마|셰르와니','두파타|전통 모자|자수 장식','여러 지역의 옷차림을 살펴봐요.'],
-  ['BD','방글라데시','다카','아시아','🇧🇩','사리|판자비|살와르 카미즈','두파타|장식 팔찌|전통 모자','방글라데시의 다채로운 의복이에요.'],
-  ['NP','네팔','카트만두','아시아','🇳🇵','다우라 수루왈|구뉴 촐로|하쿠 파타시','다카 토피|장식 숄|전통 허리띠','하쿠 파타시는 네와르 공동체의 옷이에요.'],
-  ['BT','부탄','팀푸','아시아','🇧🇹','고|키라|토에고','케라 띠|장식 숄|전통 브로치','고와 키라는 부탄의 대표적인 민족 의상이기도 해요.'],
-  ['MN','몽골','울란바토르','아시아','🇲🇳','델|테를렉|전통 조끼','몽골 모자|허리띠|장식 신발','델은 다양한 디자인으로 입어요.'],
-  ['ID','인도네시아','자카르타','아시아','🇮🇩','케바야|바틱 셔츠|사롱','바틱 머리띠|전통 허리띠|스카프','지역별 전통의상이 무척 다양해요. 수도 이전 계획에 따라 수도 정보가 달라질 수 있어요.'],
-  ['MY','말레이시아','쿠알라룸푸르','아시아','🇲🇾','바주 쿠룽|바주 멜라유|케바야','송콕|송켓 숄|전통 허리띠','말레이시아에는 여러 문화권의 의상이 있어요.'],
-  ['PH','필리핀','마닐라','아시아','🇵🇭','바롱 타갈로그|바롯 사야|테르노','머리장식|자수 숄|장식 부채','지역과 행사에 따라 다양한 의상을 입어요.'],
-  ['KH','캄보디아','프놈펜','아시아','🇰🇭','삼폿|삼폿 창 크벤|전통 실크 상의','크라마|실크 숄|전통 허리띠','삼폿은 여러 형태가 있어요.'],
-  ['LA','라오스','비엔티안','아시아','🇱🇦','씬|살롱|전통 실크 상의','파비앙|실크 숄|전통 허리띠','씬은 전통 치마 형태의 옷이에요.'],
-  ['MM','미얀마','네피도','아시아','🇲🇲','론지|타메인|전통 타잉폰','가웅바웅|실크 숄|전통 허리띠','론지에는 다양한 무늬가 있어요.'],
-  ['LK','스리랑카','스리자야와르데네푸라코테','아시아','🇱🇰','오사리|사롱|칸디안 사리','장식 숄|팔찌|머리장식','스리랑카에는 여러 전통 복식이 있어요.'],
-  ['UZ','우즈베키스탄','타슈켄트','아시아','🇺🇿','차판|아틀라스 드레스|전통 조끼','도피 모자|허리띠|자수 장식','아틀라스는 화려한 실크 직물이에요.'],
-  // Europe
-  ['TR','튀르키예','앙카라','유럽','🇹🇷','카프탄|샬바르|전통 조끼','페즈|자수 스카프|장식 허리띠','시대와 지역마다 다채로운 옷차림이 있어요.'],
-  ['GR','그리스','아테네','유럽','🇬🇷','푸스타넬라|아말리아 의상|전통 조끼','페즈 모자|자수 숄|허리띠','푸스타넬라와 아말리아 의상은 역사적 복식의 예시예요.'],
-  ['GB','영국','런던','유럽','🇬🇧','스코틀랜드 킬트|스코틀랜드 전통 재킷|타탄 숄','타탄 스카프|스포란|전통 모자','스코틀랜드 지역 문화의 예시이며 영국 전체의 단일 의상은 아니에요.'],
-  ['DE','독일','베를린','유럽','🇩🇪','디른들|레더호젠|전통 조끼','전통 모자|리본 앞치마|자수 가방','주로 바이에른 등 일부 지역의 전통 복식이에요.'],
-  ['AT','오스트리아','빈','유럽','🇦🇹','디른들|레더호젠|전통 재킷','리본 앞치마|전통 모자|자수 숄','지역에 따라 전통의상 모양이 달라요.'],
-  ['ES','스페인','마드리드','유럽','🇪🇸','플라멩코 드레스|트라헤 데 코르토|전통 숄 의상','부채|만티야|머리꽃','플라멩코 의상은 특히 안달루시아 문화와 관련돼요.'],
-  ['PT','포르투갈','리스본','유럽','🇵🇹','미뉴 지방 전통의상|전통 자수 조끼|민속 축제 의상','전통 스카프|자수 앞치마|전통 모자','미뉴 지방 등 지역별 의상을 소개해요.'],
-  ['PL','폴란드','바르샤바','유럽','🇵🇱','크라쿠프 민속의상|워비치 민속의상|전통 자수 조끼','꽃 화관|전통 모자|색동 허리띠','지역별 민속의상의 예시예요.'],
-  ['RO','루마니아','부쿠레슈티','유럽','🇷🇴','이에 블라우스|전통 자수 조끼|전통 민속 치마','자수 허리띠|머리수건|전통 모자','이에 블라우스는 루마니아의 전통 의복이에요.'],
-  ['UA','우크라이나','키이우','유럽','🇺🇦','비시반카|전통 자수 드레스|전통 조끼','비노크 화관|자수 허리띠|머리수건','비시반카에는 다양한 전통 문양이 있어요.'],
-  ['NO','노르웨이','오슬로','유럽','🇳🇴','부나드|전통 자수 조끼|민속 축제 의상','전통 브로치|자수 허리띠|장식 숄','부나드는 지역마다 형태가 다를 수 있어요.'],
-  ['SE','스웨덴','스톡홀름','유럽','🇸🇪','포크드렉트|전통 앞치마 의상|민속 축제 의상','전통 머리장식|자수 앞치마|전통 숄','스웨덴의 지역별 민속 복식을 소개해요.'],
-  ['NL','네덜란드','암스테르담','유럽','🇳🇱','클레더드라흐트|폴렌담 전통의상|전통 조끼','전통 보닛|나막신 장식|자수 앞치마','폴렌담 등의 지역 복식이에요.'],
-  ['IT','이탈리아','로마','유럽','🇮🇹','사르데냐 전통의상|티롤 지역 전통의상|민속 축제 의상','전통 숄|자수 앞치마|머리장식','이탈리아도 지역별로 전통의상이 달라요.'],
-  ['FR','프랑스','파리','유럽','🇫🇷','브르타뉴 전통의상|알자스 전통의상|전통 민속 조끼','브르타뉴 코이프|알자스 리본|자수 앞치마','브르타뉴·알자스 지역 의상의 예시예요.'],
-  // Africa
-  ['NG','나이지리아','아부자','아프리카','🇳🇬','아그바다|이로와 부바|앙카라 스타일 전통복','겔레|필라 모자|구슬 장신구','여러 민족과 지역의 의복 예시예요.'],
-  ['GH','가나','아크라','아프리카','🇬🇭','켄테 의상|바타카리|전통 랩 드레스','켄테 숄|전통 모자|구슬 목걸이','켄테는 가나의 전통 직물로 잘 알려져 있어요.'],
-  ['ET','에티오피아','아디스아바바','아프리카','🇪🇹','하베샤 케미스|전통 네텔라 의상|전통 자수 튜닉','네텔라 숄|전통 머리장식|자수 띠','하베샤 전통 복식의 예시예요.'],
-  ['MA','모로코','라바트','아프리카','🇲🇦','젤라바|카프탄|타크시타','페즈 모자|전통 허리띠|자수 슬리퍼','젤라바는 긴 겉옷이에요.'],
-  ['EG','이집트','카이로','아프리카','🇪🇬','갈라베야|전통 자수 로브|전통 조끼','전통 터번|자수 숄|허리띠','전통 복식은 시대와 지역에 따라 달라요.'],
-  ['SN','세네갈','다카르','아프리카','🇸🇳','그랑 부부|바쟁 의상|전통 튜닉','전통 머리장식|자수 모자|팔찌','화려한 바쟁 직물을 사용하기도 해요.'],
-  ['KE','케냐','나이로비','아프리카','🇰🇪','마사이 슈카|캉가 랩 의상|키코이 의상','구슬 목걸이|구슬 팔찌|전통 숄','마사이 슈카는 마사이 공동체의 의복이에요.'],
-  ['UG','우간다','캄팔라','아프리카','🇺🇬','고메시|칸주|전통 랩 드레스','전통 허리띠|장식 숄|머리장식','고메시는 우간다의 전통 의상이에요.'],
-  ['RW','르완다','키갈리','아프리카','🇷🇼','우무샤나나|전통 드레이프 의상|전통 숄 의상','장식 숄|구슬 목걸이|전통 허리띠','우무샤나나는 전통 행사에 입는 옷이에요.'],
-  ['TZ','탄자니아','도도마','아프리카','🇹🇿','캉가 의상|키텐게 의상|마사이 슈카','구슬 목걸이|머리수건|전통 숄','마사이 슈카는 특정 공동체의 문화예요.'],
-  // Americas
-  ['MX','멕시코','멕시코시티','아메리카','🇲🇽','차로 의상|우이필|전통 레보소 의상','솜브레로|레보소 숄|자수 허리띠','우이필은 여러 원주민 공동체의 복식과 관련돼요.'],
-  ['PE','페루','리마','아메리카','🇵🇪','폴레라|안데스 판초|전통 자수 조끼','추요 모자|안데스 숄|전통 허리띠','안데스 지역의 전통 복식 예시예요.'],
-  ['BO','볼리비아','수크레','아메리카','🇧🇴','폴레라|안데스 판초|전통 자수 블라우스','볼러 모자|안데스 숄|전통 허리띠','수크레는 헌법상 수도이고 라파스는 정부 소재지예요.'],
-  ['GT','과테말라','과테말라시티','아메리카','🇬🇹','우이필|코르테|전통 자수 블라우스','전통 허리띠|머리띠|직물 숄','마야 공동체마다 전통 무늬가 달라요.'],
-  ['CO','콜롬비아','보고타','아메리카','🇨🇴','루아나|전통 폴레라|전통 축제 의상','솜브레로 부엘티아오|전통 숄|장식 허리띠','지역별 전통 복식을 소개해요.'],
-  ['AR','아르헨티나','부에노스아이레스','아메리카','🇦🇷','가우초 의상|전통 판초|전통 민속 드레스','가우초 모자|목 스카프|전통 허리띠','가우초 문화와 연관된 의상 예시예요.'],
-  ['BR','브라질','브라질리아','아메리카','🇧🇷','바이아나 드레스|전통 레이스 의상|바이아 지역 축제복','머리수건|구슬 목걸이|전통 숄','바이아나 의상은 특히 바이아 지역의 문화예요.'],
-  // Middle East (separate region filter)
-  ['SA','사우디아라비아','리야드','중동','🇸🇦','토브|아바야|전통 조끼','구트라|아갈|전통 허리띠','지역과 상황에 따라 옷차림이 다양해요.'],
-  ['AE','아랍에미리트','아부다비','중동','🇦🇪','칸두라|아바야|전통 자수 드레스','구트라|샤일라|전통 허리띠','현지의 다양한 전통 복식을 소개해요.'],
-  ['JO','요르단','암만','중동','🇯🇴','전통 토브|전통 카프탄|자수 드레스','케피예|전통 허리띠|장식 숄','요르단의 전통 자수 문화를 살펴봐요.']
-];
-
-const COUNTRIES = rawCountries.map(([id,name,capital,region,flag,garments,accessories,note]) => ({
-  id,name,capital,region,flag,note,
-  outfits: garments.split('|').map((label,index) => ({id:`${id}-o${index}`,label})),
-  accessories: accessories.split('|').map((label,index) => ({id:`${id}-a${index}`,label}))
-}));
-const REGIONS = ['전체','아시아','유럽','아프리카','아메리카','중동'];
-const findCountry = (id) => COUNTRIES.find(country=>country.id===id) || null;
-
-window.GameCatalog = { COUNTRIES, REGIONS, findCountry };
-
-</script>
-<script>
-(()=>{
 'use strict';
-const {COUNTRIES,REGIONS,findCountry}=window.GameCatalog;
-const STORAGE_KEY='family-dressup-prototype-state-v1';
-const ROLES=[
-  {id:'grandpa',label:'할아버지',symbol:'👴',type:'person',group:'grand'},
-  {id:'grandma',label:'할머니',symbol:'👵',type:'person',group:'grand'},
-  {id:'adult_m',label:'남자 성인',symbol:'🧑',type:'person',group:'adult'},
-  {id:'adult_f',label:'여자 성인',symbol:'👩',type:'person',group:'adult'},
-  {id:'student_m',label:'남자 학생',symbol:'🎒',type:'person',group:'child'},
-  {id:'student_f',label:'여자 학생',symbol:'📚',type:'person',group:'child'},
-  {id:'child_m',label:'남자아이',symbol:'🧒',type:'person',group:'child'},
-  {id:'child_f',label:'여자아이',symbol:'🪁',type:'person',group:'child'},
-  {id:'dog',label:'강아지',symbol:'🐶',type:'pet',group:'pet'},
-  {id:'cat',label:'고양이',symbol:'🐱',type:'pet',group:'pet'}
+/*
+  원본 파일을 건드리지 않고 같은 (1024×1536) 캔버스에서 겹칩니다.
+  assets/{캐릭터키}_default.png
+  assets/{캐릭터키}_hair1.png ... hair4.png
+  assets/{나라}_{캐릭터키}_{상의|하의|신발}.png
+  assets/배경_{나라}.png
+  학생남자/학생여자는 성인남자/성인여자의 이미지를 공유합니다.
+*/
+const ROOT='assets/';
+const COUNTRIES=[
+ {id:'한국',flag:'🇰🇷',capital:'서울',clothes:'한복'},
+ {id:'일본',flag:'🇯🇵',capital:'도쿄',clothes:'기모노'},
+ {id:'중국',flag:'🇨🇳',capital:'베이징',clothes:'한푸'},
+ {id:'베트남',flag:'🇻🇳',capital:'하노이',clothes:'아오자이'},
+ {id:'유럽',flag:'🇪🇺',capital:'',clothes:'유럽의 전통 민속의상'},
+ {id:'북극',flag:'❄️',capital:'',clothes:'북극 지역 전통 방한복'},
+ {id:'아랍',flag:'🌙',capital:'',clothes:'아랍 지역의 전통의상'}
 ];
-const SKINS=[{name:'밝은 피부',hex:'#f6d5b8'},{name:'살구빛 피부',hex:'#edbb98'},{name:'황갈색 피부',hex:'#d99c70'},{name:'갈색 피부',hex:'#ae7659'},{name:'진한 갈색 피부',hex:'#84543d'},{name:'짙은 피부',hex:'#5b392e'}];
-const FURS=[{name:'크림색',hex:'#f3d4a4'},{name:'연갈색',hex:'#c89a73'},{name:'검정색',hex:'#5a5260'},{name:'회색',hex:'#acb5bc'},{name:'흰색',hex:'#f1e8e6'},{name:'황갈색',hex:'#ac7550'}];
-const HAIR_COLORS=[{name:'검정색',hex:'#36303b'},{name:'짙은 갈색',hex:'#655146'},{name:'갈색',hex:'#a17354'},{name:'금발',hex:'#d8ac5a'},{name:'붉은색',hex:'#ad5f54'},{name:'은회색',hex:'#a5a6b4'}];
-const HAIRS=[{id:'short',label:'짧은 머리'},{id:'long',label:'긴 머리'},{id:'bob',label:'단발머리'},{id:'curl',label:'곱슬머리'},{id:'up',label:'묶은 머리'},{id:'bald',label:'민머리'}];
-const SHAPES=[{id:'round',label:'동그란 얼굴'},{id:'oval',label:'갸름한 얼굴'},{id:'square',label:'네모난 얼굴'},{id:'heart',label:'하트 얼굴'}];
-const FACES=[{id:'smile',label:'방긋 웃는 얼굴'},{id:'happy',label:'활짝 웃는 얼굴'},{id:'wink',label:'윙크 얼굴'},{id:'calm',label:'차분한 얼굴'}];
-const CLOTH_COLORS=[{name:'딸기 분홍',hex:'#e9a1b5',dark:'#c97a9b'},{name:'라벤더',hex:'#aa99e8',dark:'#8270c8'},{name:'하늘 파랑',hex:'#86c0e9',dark:'#659cd4'},{name:'민트 초록',hex:'#84cda9',dark:'#61ab8d'},{name:'햇살 노랑',hex:'#efc777',dark:'#d8a44d'},{name:'복숭아',hex:'#e99a83',dark:'#c87d6c'}];
-const STEPS=['이름 정하기','가족 만들기','나라 고르기','옷 입히기','가족 여행'];
-const $app=document.getElementById('app');
-const $toast=document.getElementById('toast');
-let toastTimer=0;
-let ui={region:'전체',search:'',selectedMemberId:null,selectedDressId:null};
-let state=loadState();
-
-function escapeHTML(input){return String(input??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));}
-function safeHex(s,fallback){return /^#[0-9a-fA-F]{6}$/.test(s||'')?s:fallback;}
-function roleOf(m){return ROLES.find(r=>r.id===m.role) || ROLES[2];}
-function typeOf(m){return roleOf(m).type;}
-function defaultState(){return {version:1,step:0,playerName:'',members:[],countryId:null};}
-function loadState(){
-  try{
-    const v=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');
-    if(!v||v.version!==1||!Array.isArray(v.members))return defaultState();
-    const members=v.members.filter(m=>m&&ROLES.some(r=>r.id===m.role)).slice(0,24).map(m=>({
-      id:String(m.id||makeId()),role:m.role,nickname:String(m.nickname||'').slice(0,18),skin:Number.isInteger(m.skin)?Math.max(0,Math.min(5,m.skin)):1,
-      hair:HAIRS.some(h=>h.id===m.hair)?m.hair:'short',hairColor:Number.isInteger(m.hairColor)?Math.max(0,Math.min(5,m.hairColor)):0,
-      face:FACES.some(f=>f.id===m.face)?m.face:'smile',shape:SHAPES.some(f=>f.id===m.shape)?m.shape:'round',outfitId:String(m.outfitId||''),clothColor:Number.isInteger(m.clothColor)?Math.max(0,Math.min(5,m.clothColor)):0,
-      accessoryId:String(m.accessoryId||'')
-    }));
-    return {version:1,step:Math.max(0,Math.min(4,Number(v.step)||0)),playerName:String(v.playerName||'').slice(0,20),members,countryId:findCountry(v.countryId)?v.countryId:null};
-  }catch(e){return defaultState();}
+const TYPES=[
+ {id:'노인남자',label:'할아버지',emoji:'👴',base:'노인남자'},
+ {id:'노인여자',label:'할머니',emoji:'👵',base:'노인여자'},
+ {id:'성인남자',label:'어른 남자',emoji:'👨',base:'성인남자'},
+ {id:'성인여자',label:'어른 여자',emoji:'👩',base:'성인여자'},
+ {id:'학생남자',label:'남학생',emoji:'🧑‍🎓',base:'성인남자'},
+ {id:'학생여자',label:'여학생',emoji:'👩‍🎓',base:'성인여자'},
+ {id:'아이남자',label:'남자아이',emoji:'👦',base:'아이남자'},
+ {id:'아이여자',label:'여자아이',emoji:'👧',base:'아이여자'}
+];
+const TABS=[{id:'hair',label:'머리',icon:'💇'},{id:'top',label:'상의',icon:'👘'},{id:'bottom',label:'하의',icon:'👗'},{id:'shoes',label:'신발',icon:'👞'},{id:'skin',label:'피부',icon:'🎨'}];
+// 첫 번째는 PNG 원본 그대로. 나머지 5개만 부드러운 저채도 파스텔로 변환.
+const COLORS=[
+ {id:'original',hex:'#f6efe8',name:'원본'},
+ {id:'rose',hex:'#e8bac9',name:'로즈'},
+ {id:'lilac',hex:'#c9bfe0',name:'라일락'},
+ {id:'sage',hex:'#b9d0bd',name:'세이지'},
+ {id:'powder',hex:'#b9d5e0',name:'파우더 블루'},
+ {id:'cream',hex:'#e8d8b7',name:'크림'}
+];
+const SKINS=[
+ {id:'fair',hex:'#ffe3c8',name:'밝은 피부',rgb:[255,222,198]},
+ {id:'warm',hex:'#e8b58f',name:'따뜻한 피부',rgb:[232,180,144]},
+ {id:'tan',hex:'#b77b58',name:'구릿빛 피부',rgb:[183,123,88]},
+ {id:'deep',hex:'#754b39',name:'짙은 피부',rgb:[117,75,57]}
+];
+const $=id=>document.getElementById(id);
+const state={screen:'landing',country:'한국',people:[],index:0,tab:'top',nextId:1,renderSeq:0,photoSeq:0};
+const sourceCache=new Map(),thumbCache=new Map(),fullCache=new Map(),alphaBoundsCache=new Map();let folderURLs=new Map();
+let toastTimer=null,drag=null;
+function toast(msg){const el=$('toast');el.textContent=msg;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),2600)}
+function show(screen){state.screen=screen;document.querySelectorAll('.screen').forEach(el=>el.classList.toggle('active',el.id===screen));}
+function charInfo(person){return TYPES.find(x=>x.id===person.type)}
+function current(){return state.people[state.index]||null}
+function countryInfo(){return COUNTRIES.find(x=>x.id===state.country)}
+function basePath(person){return ROOT+charInfo(person).base+'_default.png'}
+function partPath(person,part){return ROOT+state.country+'_'+charInfo(person).base+'_'+({top:'상의',bottom:'하의',shoes:'신발'})[part]+'.png'}
+function hairPath(person,n){return ROOT+charInfo(person).base+'_hair'+n+'.png'}
+function backgroundPath(){return ROOT+'배경_'+state.country+'.png'}
+function familyType(){const a=state.people;const adult=a.filter(p=>p.type.startsWith('성인')).length;const old=a.filter(p=>p.type.startsWith('노인')).length;const young=a.filter(p=>p.type.startsWith('아이')||p.type.startsWith('학생')).length;
+ if(!a.length)return '가족을 골라 주세요';
+ if(old&&young&&!adult)return '조손 가족';
+ if(old&&adult&&young)return '3세대 대가족';
+ if(a.length>=5)return '대가족';
+ if(adult===1&&young>0)return '한부모 가족';
+ if(adult>=2&&young>0)return '핵가족';
+ if(adult===2&&!young&&!old)return '부부 가족';
+ if(old&&!young&&adult)return '확대 가족';
+ return '다양한 모습의 가족';
 }
-function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}catch(e){/* private mode or file protocol restrictions */}}
-function makeId(){return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2,9)}`;}
-function toast(message){$toast.textContent=message;$toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$toast.classList.remove('show'),3000);}
-function notifyAndRender(message){save();render();if(message)toast(message);}
-function currentCountry(){return findCountry(state.countryId);}
-function memberName(m){return m.nickname?.trim()||`${roleOf(m).label} ${state.members.filter(x=>x.role===m.role).findIndex(x=>x.id===m.id)+1}`;}
-function isDressed(m){const country=currentCountry();return typeOf(m)==='pet'||!!country?.outfits.some(o=>o.id===m.outfitId);}
-function personMembers(){return state.members.filter(m=>typeOf(m)==='person');}
-function dressProgress(){const people=personMembers();return {total:people.length,done:people.filter(isDressed).length};}
-function familyInfo(){
-  const people=state.members.filter(m=>typeOf(m)==='person');
-  const adults=people.filter(m=>roleOf(m).group==='adult').length;
-  const children=people.filter(m=>roleOf(m).group==='child').length;
-  const grands=people.filter(m=>roleOf(m).group==='grand').length;
-  const pets=state.members.length-people.length;
-  let type='아직 가족을 만들지 않았어요';
-  if(people.length===0&&pets>0)type='반려동물 가족';
-  else if(grands>0&&children>0&&adults===0)type='조손가족';
-  else if(grands>0&&(adults>0||children>0))type='대가족';
-  else if(adults>=3)type='대가족';
-  else if(adults===1&&children>0)type='한부모가족';
-  else if(adults===2&&children>0)type='핵가족';
-  else if(adults>=1&&children===0)type='성인 가족';
-  else if(children>0)type='다양한 가족';
-  else if(grands>0)type='조부모 가족';
-  return {type,people:people.length,pets};
+function createPerson(type){return {id:state.nextId++,type,name:TYPES.find(x=>x.id===type).label,skin:0,hair:0,worn:{top:null,bottom:null,shoes:null}}}
+function addPerson(type){if(state.people.length>=12){toast('가족은 12명까지 만들 수 있어요');return}state.people.push(createPerson(type));renderFamily()}
+function renderFamily(){
+ $('memberCount').textContent=state.people.length+'명';$('familyType').textContent=familyType();
+ const root=$('memberList');root.replaceChildren();
+ if(!state.people.length){root.innerHTML='<p class="empty-family">여기에 가족이 모일 거예요 🌼</p>'}
+ state.people.forEach(p=>{const line=document.createElement('div');line.className='person-pill';const type=charInfo(p);const face=document.createElement('span');face.textContent=type.emoji;face.style.fontSize='25px';const input=document.createElement('input');input.maxLength=10;input.value=p.name;input.setAttribute('aria-label',type.label+' 이름');input.addEventListener('input',()=>p.name=input.value);const remove=document.createElement('button');remove.textContent='×';remove.setAttribute('aria-label',p.name+' 빼기');remove.onclick=()=>{state.people=state.people.filter(x=>x.id!==p.id);renderFamily()};line.append(face,input,remove);root.append(line)});
+ $('familyNext').classList.toggle('disabled',!state.people.length);
 }
-function displayRole(m){const role=roleOf(m);return role.label;}
-function dollMarkup(m){
-  const role=roleOf(m),pet=role.type==='pet',country=currentCountry(),outfit=country?.outfits.find(o=>o.id===m.outfitId),acc=country?.accessories.find(a=>a.id===m.accessoryId);
-  const palette=CLOTH_COLORS[m.clothColor]||CLOTH_COLORS[0];
-  const skin=pet?(FURS[m.skin]||FURS[0]).hex:(SKINS[m.skin]||SKINS[1]).hex;
-  const hair=HAIR_COLORS[m.hairColor]?.hex||HAIR_COLORS[0].hex;
-  const face=FACES.some(x=>x.id===m.face)?m.face:'smile';
-  const shape=SHAPES.some(x=>x.id===m.shape)?m.shape:'round';
-  return `<div class="doll-wrap"><div class="doll ${pet?'pet '+(m.role==='cat'?'cat':'dog'):''} hair-${escapeHTML(m.hair)} face-${escapeHTML(face)} shape-${escapeHTML(shape)}" style="--skin:${safeHex(skin,'#dfaf86')};--hair:${safeHex(hair,'#55443a')};--cloth:${safeHex(palette.hex,'#d19ee0')};--cloth-dark:${safeHex(palette.dark,'#a474c4')}" role="img" aria-label="${escapeHTML(memberName(m))}, ${escapeHTML(outfit?.label||'기본 의상')}">
-    ${pet?`<div class="pet-tail"></div><div class="pet-ear"></div><div class="pet-ear right"></div><div class="pet-body"></div><div class="pet-head"></div><div class="pet-eye"></div><div class="pet-eye right"></div><div class="pet-nose"></div><div class="pet-paw"></div><div class="pet-paw right"></div><div class="pet-collar"></div>`
-    :`<div class="hair-back"></div><div class="arm left"></div><div class="arm right"></div><div class="neck"></div><div class="leg"></div><div class="leg right"></div><div class="shoe"></div><div class="shoe right"></div><div class="shirt"></div><div class="head"><span class="eye left"></span><span class="eye right"></span><span class="cheek left"></span><span class="cheek right"></span><span class="mouth"></span></div><div class="hair-front"></div>${outfit?'<div class="costume"></div>':''}`}
-    ${acc?'<div class="accessory" aria-hidden="true">✿</div>':''}<div class="doll-ground"></div></div></div>`;
-}
-function sidebar(){const f=familyInfo();return `<aside class="family-panel" aria-label="현재 가족판"><div class="sidebar-head"><h3>🏠 우리 가족판</h3><span class="tiny-pill">${state.members.length}명 / 마리</span></div><div class="family-type"><span class="eyebrow">우리 가족의 모습</span><strong>${escapeHTML(f.type)}</strong><p>사람 ${f.people}명 · 반려동물 ${f.pets}마리</p></div><div class="family-mini-grid">${state.members.length?state.members.map(m=>`<div class="family-mini">${dollMarkup(m)}<b title="${escapeHTML(memberName(m))}">${escapeHTML(memberName(m))}</b><small>${isDressed(m)&&currentCountry()?'꾸몄어요 ✨':displayRole(m)}</small></div>`).join(''):'<div class="empty-mini">구성원을 추가하면<br>여기에 나타나요 ♡</div>'}</div><p class="helper-note">* 가족 유형은 선택한 역할만으로 추정한 게임 속 분류예요. 실제 가족의 관계와 형태는 더 다양해요.</p></aside>`;}
-function top(){return `<header class="topbar"><div class="brand"><div class="brand-mark" aria-hidden="true">✿</div><div><div class="brand-name">우리 가족 옷 여행</div><div class="brand-sub">세상 모든 가족과 떠나는 전통의상 여행</div></div></div><div class="top-actions"><button class="btn btn-small btn-white" data-action="help">놀이 안내 ?</button><button class="btn btn-small btn-white" data-action="reset">처음부터 ↺</button></div></header><nav class="stepbar" aria-label="게임 진행 단계">${STEPS.map((s,i)=>`<div class="step ${state.step===i?'active':state.step>i?'past':''}" ${state.step===i?'aria-current="step"':''}><span>${state.step>i?'✓':i+1}</span>${s}</div>`).join('')}</nav>`;}
-function intro(){const a={role:'adult_f',skin:2,hair:'long',hairColor:1,face:'happy',clothColor:0,outfitId:'',nickname:'친구1'};const b={role:'adult_m',skin:4,hair:'curl',hairColor:0,face:'smile',clothColor:1,outfitId:'',nickname:'친구2'};const c={role:'child_f',skin:1,hair:'bob',hairColor:3,face:'wink',clothColor:2,outfitId:'',nickname:'친구3'};
-return `<section class="welcome"><div class="welcome-copy"><span class="kicker">🌈 함께라서 더 즐거운 가족 여행</span><h1>나만의 가족을 만들고,<br><span class="rainbow-text">세계의 옷을 입혀 봐요!</span></h1><p>모양도 색깔도 다 달라서 더 멋진 가족!<br>우리 가족과 어디로 여행을 떠날까요?</p><div class="name-box"><label class="input-label" for="player-name">내 이름을 알려줘!</label><input id="player-name" class="text-input" maxlength="20" placeholder="예: 윤지" value="${escapeHTML(state.playerName)}" autocomplete="off" enterkeyhint="go"><div class="hint">이름만 입력하면 돼요. 내 캐릭터는 가족판에 자동으로 추가되지 않아요.</div><div class="btn-row"><button class="btn btn-primary" data-action="start">게임 시작하기 ✨ →</button></div></div></div><div class="welcome-art" aria-hidden="true">${dollMarkup(a)}${dollMarkup(b)}${dollMarkup(c)}</div></section>`;}
-function memberTabs(){return `<div class="member-strip" aria-label="우리 가족 구성원">${state.members.map(m=>`<button class="member-card ${ui.selectedMemberId===m.id?'selected':''}" data-action="choose-member" data-id="${escapeHTML(m.id)}" aria-pressed="${ui.selectedMemberId===m.id}">${dollMarkup(m)}<b>${escapeHTML(memberName(m))}</b><small>${escapeHTML(roleOf(m).label)}</small></button>`).join('')}</div>`;}
-function paintSwatches(items,value,key){return `<div class="swatches" role="group" aria-label="${key==='skin'?'피부색 또는 털 색':key==='hairColor'?'머리 색':'옷 색'}">${items.map((item,index)=>`<button type="button" data-action="style" data-field="${key}" data-value="${index}" class="swatch ${index===value?'selected':''}" style="--swatch:${item.hex}" aria-label="${item.name}" title="${item.name}" aria-pressed="${index===value}"></button>`).join('')}</div>`;}
-function fieldSelect(items,current,field){return `<select class="small-select" data-field="${field}" aria-label="${field==='hair'?'머리 스타일':field==='shape'?'얼굴 모양':'얼굴 표정'}">${items.map(item=>`<option value="${item.id}" ${item.id===current?'selected':''}>${escapeHTML(item.label)}</option>`).join('')}</select>`;}
-function editor(m){const pet=typeOf(m)==='pet';return `<div class="editor"><div class="editor-header"><h3>🎨 ${escapeHTML(memberName(m))} 꾸미기</h3><button class="btn btn-small btn-danger" data-action="remove-member" data-id="${escapeHTML(m.id)}">구성원 삭제</button></div><div class="editor-content"><div class="editor-preview">${dollMarkup(m)}</div><div class="editor-controls"><div class="field-row"><div class="field"><label for="member-nickname">이름 또는 별명 (선택)</label><input class="small-input" id="member-nickname" data-field="nickname" maxlength="18" placeholder="예: 엄마, 민지, 코코" value="${escapeHTML(m.nickname)}"></div><div class="field"><label>얼굴 모양</label>${fieldSelect(SHAPES,m.shape,'shape')}</div></div><div class="field" style="margin-bottom:12px"><label>얼굴 표정</label>${fieldSelect(FACES,m.face,'face')}</div><div class="field"><label>${pet?'털 색':'피부색'}</label>${paintSwatches(pet?FURS:SKINS,m.skin,'skin')}</div>${pet?'':`<div class="field-row" style="margin-top:12px"><div class="field"><label>머리 스타일</label>${fieldSelect(HAIRS,m.hair,'hair')}</div><div class="field"><label>머리 색깔</label>${paintSwatches(HAIR_COLORS,m.hairColor,'hairColor')}</div></div>`}</div></div><p class="helper-note">${pet?'반려동물은 기본 목걸이를 하고 있어요.':'모든 캐릭터는 처음에 흰 티셔츠와 바지를 입고 있어요.'}</p></div>`;}
-function familyBuilder(){if(!state.members.some(m=>m.id===ui.selectedMemberId))ui.selectedMemberId=state.members[0]?.id||null;const m=state.members.find(m=>m.id===ui.selectedMemberId);
-return `<div class="section-title"><span class="kicker">STEP 2 · 우리 가족 구성하기</span><h2>${escapeHTML(state.playerName||'친구')}의 가족은 어떤 모습일까?</h2><p>가족을 원하는 만큼 추가해요. 같은 역할도 여러 명 추가할 수 있어요!</p></div><div class="select-title">① 가족 구성원 추가하기 <span class="family-count">${state.members.length}/24</span></div><div class="role-grid">${ROLES.map(r=>`<button class="role-btn" data-action="add-role" data-role="${r.id}" ${state.members.length>=24?'disabled':''}><span class="role-symbol" aria-hidden="true">${r.symbol}</span><small>${r.label}</small></button>`).join('')}</div><div class="section-divider"></div><div class="select-title">② 얼굴·피부색·머리 모양 고르기</div>${state.members.length?`${memberTabs()}${m?editor(m):''}`:'<div class="empty-state">위에서 가족을 한 명씩 눌러서 추가해 봐요! 🧸</div>'}<div class="primary-actions"><button class="btn btn-white" data-action="go" data-step="0">← 이름 다시 쓰기</button><button class="btn btn-primary" data-action="go" data-step="2" ${personMembers().length===0?'disabled':''}>가족 완성! 나라 고르기 →</button></div>${personMembers().length===0?'<div class="notice">전통의상을 입힐 사람이 최소 1명 필요해요. 강아지와 고양이는 함께 여행할 수 있어요.</div>':''}`;}
-function countryCards(){const query=ui.search.trim().toLocaleLowerCase();const filtered=COUNTRIES.filter(c=>(ui.region==='전체'||c.region===ui.region)&&(!query||[c.name,c.capital,...c.outfits.map(o=>o.label)].join(' ').toLocaleLowerCase().includes(query)));
-return filtered.length?filtered.map(c=>`<button class="country-card ${c.id===state.countryId?'selected':''}" data-action="select-country" data-id="${c.id}" aria-pressed="${c.id===state.countryId}"><span class="flag" aria-hidden="true">${c.flag}</span><b>${c.name}</b><span>수도 · ${c.capital}</span></button>`).join(''):'<div class="empty-state">해당하는 나라를 찾지 못했어요. 다른 검색어로 찾아봐요.</div>';
-}
-function countrySelect(){const c=currentCountry();return `<div class="section-title"><span class="kicker">STEP 3 · 어디로 여행 갈까?</span><h2>우리 가족 모두 같은 나라의 옷을 입어요!</h2><p>${COUNTRIES.length}개 나라 중 하나를 고르면 그 나라의 전통의상을 여러 가지 입어 볼 수 있어요.</p></div><div class="country-toolbar"><div class="chips" role="group" aria-label="나라별 분류">${REGIONS.map(r=>`<button class="chip ${ui.region===r?'selected':''}" data-action="region" data-region="${r}" aria-pressed="${ui.region===r}">${r}</button>`).join('')}</div><input id="country-search" class="text-input country-search" placeholder="나라·옷 이름 검색 🔎" value="${escapeHTML(ui.search)}" aria-label="나라 검색"></div><div class="country-grid" id="country-grid">${countryCards()}</div><div class="country-footer"><div class="selected-country">${c?`${c.flag} ${c.name} · ${c.capital}`:'아직 나라를 고르지 않았어요'}<span>${c?`${c.outfits.map(o=>o.label).slice(0,3).join(' · ')} 외`:'어떤 나라로 여행할까요?'}</span></div><span class="counter">${COUNTRIES.length}개 나라</span></div>${c?`<div class="notice">문화 안내: ${escapeHTML(c.note)} 한 나라 안에도 다양한 지역·공동체·시대의 전통의상이 있어요.</div>`:''}<div class="primary-actions"><button class="btn btn-white" data-action="go" data-step="1">← 가족 고치기</button><button class="btn btn-primary" data-action="go" data-step="3" ${!c?'disabled':''}>옷입히기 시작 →</button></div>`;}
-function outfitBtn(outfit,m,index){const active=m.outfitId===outfit.id;const color=CLOTH_COLORS[index%CLOTH_COLORS.length].hex;return `<button class="option-card ${active?'selected':''}" data-action="outfit" data-id="${outfit.id}" aria-pressed="${active}"><span class="option-icon" style="--outfit-color:${color}">✿</span><span><strong>${escapeHTML(outfit.label)}</strong><small>${active?'입고 있어요! ✨':'눌러서 입혀 주세요'}</small></span></button>`;}
-function accessoryButtons(c,m){return `<div class="chips">${[{id:'',label:'장식 없음'},...c.accessories].map(a=>`<button class="chip ${m.accessoryId===a.id?'selected':''}" data-action="accessory" data-id="${escapeHTML(a.id)}" aria-pressed="${m.accessoryId===a.id}">${escapeHTML(a.label)}</button>`).join('')}</div>`;}
-function dress(){const c=currentCountry();if(!c)return countrySelect();if(!state.members.some(m=>m.id===ui.selectedDressId))ui.selectedDressId=state.members.find(m=>typeOf(m)==='person')?.id||state.members[0]?.id;const m=state.members.find(x=>x.id===ui.selectedDressId);if(!m)return familyBuilder();const pet=typeOf(m)==='pet';const progress=dressProgress();const percent=progress.total?Math.round(100*progress.done/progress.total):0;
-return `<div class="section-title"><span class="kicker">STEP 4 · 알록달록 전통 옷입히기</span><div class="dress-header"><div><h2>${c.flag} ${c.name} 옷가게에 오신 걸 환영해요!</h2><p>한 명씩 눌러서 의상과 소품을 골라 주세요.</p></div><button class="btn btn-small btn-white" data-action="go" data-step="2">나라 바꾸기</button></div></div><div><div class="select-title">우리 가족 <span class="family-count">옷 입힌 사람 ${progress.done} / ${progress.total}</span></div><div class="progress-shell" aria-label="옷입히기 진행 ${percent}%"><div class="progress-fill" style="width:${percent}%"></div></div>${`<div class="member-strip" style="margin-top:11px">${state.members.map(p=>`<button class="member-card ${ui.selectedDressId===p.id?'selected':''}" data-action="dress-member" data-id="${escapeHTML(p.id)}" aria-pressed="${ui.selectedDressId===p.id}">${dollMarkup(p)}<b>${escapeHTML(memberName(p))}</b><small>${typeOf(p)==='pet'?'함께 여행해요 🐾':isDressed(p)?'완료 ✓':'의상 고르기'}</small></button>`).join('')}</div>`}</div><div class="dress-area"><div class="big-stage"><div class="floating-sticker">${c.flag} ${escapeHTML(c.name)}</div>${dollMarkup(m)}<strong>${escapeHTML(memberName(m))}</strong><span>${pet?'동물 친구의 장식을 골라요!':c.outfits.find(o=>o.id===m.outfitId)?.label||'아직 흰 티셔츠와 바지를 입고 있어요'}</span></div><div class="dress-picks">${pet?'<div class="pet-info">🐾 강아지와 고양이는 사람의 전통의상 대신, 여행 분위기에 어울리는 장식 소품을 골라요.</div>':`<h3>👘 전통의상 고르기</h3><div class="outfit-grid">${c.outfits.map((o,i)=>outfitBtn(o,m,i)).join('')}</div><div style="margin-top:15px"><div class="select-title">옷 색깔 고르기</div>${paintSwatches(CLOTH_COLORS,m.clothColor,'clothColor')}</div>`}<div class="select-title" style="margin-top:17px">✨ ${pet?'장식 소품':'어울리는 소품'} 고르기</div>${accessoryButtons(c,m)}<div class="selected-description">${pet?'반려동물은 가족과 같은 나라로 여행하지만 사람 전통의상을 착용하지 않아요.':`선택한 의상: <b>${escapeHTML(c.outfits.find(o=>o.id===m.outfitId)?.label||'아직 선택 전')}</b><br>`}문화 이야기: ${escapeHTML(c.note)}</div><div class="btn-row"><button class="btn btn-soft" data-action="next-member">다음 가족 꾸미기 →</button></div></div></div><div class="finish-wrap"><div class="primary-actions" style="margin:0"><div><strong>${progress.done===progress.total?'✨ 모두 옷을 입었어요!':'조금만 더 꾸며 볼까요?'}</strong><p>${progress.done===progress.total?'우리 가족 여행 장면을 만나 봐요.':'모든 사람에게 전통의상을 하나씩 입혀 주세요.'}</p></div><button class="btn btn-primary" data-action="finish" ${progress.done!==progress.total||progress.total===0?'disabled':''}>가족 여행 영상 보기 🎬 →</button></div></div>`;}
-function storyText(){const c=currentCountry();if(!c)return '';const unique=[...new Set(personMembers().map(m=>c.outfits.find(o=>o.id===m.outfitId)?.label).filter(Boolean))];const garment=unique.length===1?unique[0]:unique.length===2?`${unique[0]}와 ${unique[1]}`:`${unique.slice(0,2).join(', ')} 등 여러 전통의상`;
-return `${state.playerName}의 가족은 ${c.name}의 ${garment} 같은 전통의상을 입고, ${c.name}의 수도인 ${c.capital}로 신나는 여행을 떠났어요!`;
-}
-function ending(){const c=currentCountry();if(!c)return countrySelect();const copy=storyText();return `<div class="section-title"><span class="kicker">STEP 5 · 우리 가족 여행 이야기</span><h2>짜잔! ${escapeHTML(state.playerName)}의 가족이 여행을 떠나요! 🎉</h2><p>캐릭터들이 함께 걸어가는 애니메이션이에요. 실제 영상 파일은 아직 만들지 않았어요.</p></div><div class="ending-stage" aria-label="가족 여행 걷기 애니메이션"><div class="floating-sticker">${c.flag} ${escapeHTML(c.name)} 여행!</div><div class="sun"></div><div class="ending-city">${escapeHTML(c.capital)}에 도착했어요!</div><div class="parade" style="--parade-duration:${Math.max(12,Math.min(36,Math.round(state.members.length*1.45)))}s">${state.members.map(m=>`<div class="parade-member">${dollMarkup(m)}<div class="parade-name">${escapeHTML(memberName(m))}</div></div>`).join('')}</div></div><div class="ending-progress" aria-hidden="true"><div></div></div><div class="story-box" id="story-text">${escapeHTML(copy)}</div><div class="ending-facts"><div class="fact">${c.flag} 나라 · ${escapeHTML(c.name)}</div><div class="fact">🏛️ 수도 · ${escapeHTML(c.capital)}</div><div class="fact">🏠 ${escapeHTML(familyInfo().type)}</div></div><p class="story-caption" style="margin-top:13px">서로 다른 모습의 가족이 함께 떠나는 즐거운 여행!</p><div class="primary-actions"><button class="btn btn-white" data-action="speak">🔊 이야기 읽어주기</button><div class="btn-row" style="margin-top:0"><button class="btn btn-soft" data-action="go" data-step="2">다른 나라로 여행</button><button class="btn btn-primary" data-action="go" data-step="3">다시 옷 입히러 가기 ↺</button></div></div>`;}
-function render(){
-  if(state.step>=2&&personMembers().length===0)state.step=1;
-  if(state.step>=3&&!currentCountry())state.step=2;
-  const page=[intro,familyBuilder,countrySelect,dress,ending][state.step]||intro;
-  $app.innerHTML=`<div class="app-shell safe-bottom">${top()}<div class="workspace"><main class="main panel">${page()}</main>${sidebar()}</div></div>`;
-  const parade=$app.querySelector('.parade');
-  const stage=$app.querySelector('.ending-stage');
-  if(parade&&stage)parade.style.setProperty('--parade-shift',`${Math.max(0,parade.scrollWidth-stage.clientWidth+30)}px`);
-  save();
-}
-function addMember(roleId){const role=ROLES.find(r=>r.id===roleId);if(!role)return;if(state.members.length>=24)return toast('한 번에 최대 24명·마리까지 만들 수 있어요.');const pet=role.type==='pet';const child=role.group==='child';const grand=role.group==='grand';const newMember={id:makeId(),role:role.id,nickname:'',skin:pet?0:1,hair:pet?'short':grand?'bob':child?'short':'long',hairColor:grand?5:0,face:'smile',shape:'round',outfitId:'',clothColor:state.members.length%CLOTH_COLORS.length,accessoryId:''};state.members.push(newMember);ui.selectedMemberId=newMember.id;notifyAndRender(`${role.label}을(를) 가족에 추가했어요!`);}
-function advance(step){if(step===1&&state.playerName.trim().length===0){toast('먼저 내 이름을 입력해 주세요!');return;}if(step>=2&&personMembers().length===0){toast('의상을 입힐 사람을 한 명 이상 추가해 주세요.');return;}if(step>=3&&!currentCountry()){toast('여행할 나라를 골라 주세요!');return;}if(step>=4&&dressProgress().done!==dressProgress().total){toast('모든 사람에게 옷을 입혀 주세요!');return;}state.step=step;render();window.scrollTo({top:0,behavior:'instant'});}
-function setStyle(field,value){const m=state.members.find(x=>x.id===(state.step===1?ui.selectedMemberId:ui.selectedDressId));if(!m)return;if(field==='skin'||field==='hairColor'||field==='clothColor'){const v=Number(value);if(!Number.isInteger(v)||v<0||v>5)return;m[field]=v;}else if(field==='hair'&&HAIRS.some(x=>x.id===value)){m.hair=value;}else if(field==='face'&&FACES.some(x=>x.id===value)){m.face=value;}else if(field==='shape'&&SHAPES.some(x=>x.id===value)){m.shape=value;}else if(field==='nickname'){m.nickname=String(value||'').slice(0,18);}save();render();}
-function nextDressMember(){const currentIndex=state.members.findIndex(m=>m.id===ui.selectedDressId);const all=state.members;let next=all.slice(currentIndex+1).concat(all.slice(0,currentIndex+1)).find(m=>typeOf(m)==='person'&&!isDressed(m));if(!next)next=all[(currentIndex+1)%all.length];if(next){ui.selectedDressId=next.id;render();}}
-function speak(){const copy=storyText();if(!('speechSynthesis'in window)){toast('이 브라우저는 음성 읽기를 지원하지 않아요.');return;}try{speechSynthesis.cancel();const utter=new SpeechSynthesisUtterance(copy);utter.lang='ko-KR';utter.rate=.88;utter.pitch=1.14;speechSynthesis.speak(utter);toast('이야기를 읽고 있어요 🔊');}catch(e){toast('음성 읽기를 시작하지 못했어요.');}}
-$app.addEventListener('click',ev=>{const target=ev.target.closest('[data-action]');if(!target)return;const {action,id,role,field,value,step,region}=target.dataset;
-  switch(action){
-    case 'start':{const el=document.getElementById('player-name');state.playerName=(el?.value||'').trim().slice(0,20);if(!state.playerName){toast('내 이름을 먼저 입력해 주세요!');el?.focus();return;}advance(1);break;}
-    case 'add-role':addMember(role);break;
-    case 'choose-member':ui.selectedMemberId=id;render();break;
-    case 'dress-member':ui.selectedDressId=id;render();break;
-    case 'remove-member':{const m=state.members.find(x=>x.id===id);if(!m)return;if(!confirm(`${memberName(m)}을(를) 가족판에서 빼낼까요?`))return;state.members=state.members.filter(x=>x.id!==id);ui.selectedMemberId=state.members[0]?.id||null;notifyAndRender('가족판을 수정했어요.');break;}
-    case 'go':advance(Number(step));break;
-    case 'region':ui.region=region;render();break;
-    case 'select-country':{if(state.countryId!==id){if(state.members.some(m=>m.outfitId)&&!confirm('나라를 바꾸면 지금까지 고른 의상이 초기화돼요. 바꿀까요?'))return;state.members.forEach(m=>{m.outfitId='';m.accessoryId='';});state.countryId=id;}notifyAndRender('이 나라의 전통옷을 입어 봐요!');break;}
-    case 'style':setStyle(field,value);break;
-    case 'outfit':{const m=state.members.find(x=>x.id===ui.selectedDressId);const c=currentCountry();if(!m||!c||typeOf(m)!=='person'||!c.outfits.some(o=>o.id===id))return;m.outfitId=id;notifyAndRender('잘 어울려요! ✨');break;}
-    case 'accessory':{const m=state.members.find(x=>x.id===ui.selectedDressId);const c=currentCountry();if(!m||!c||!(id===''||c.accessories.some(a=>a.id===id)))return;m.accessoryId=id;notifyAndRender('소품을 골랐어요!');break;}
-    case 'next-member':nextDressMember();break;
-    case 'finish':advance(4);break;
-    case 'speak':speak();break;
-    case 'reset':if(confirm('처음부터 새 게임을 시작할까요? 지금 가족과 옷 선택이 지워져요.')){window.speechSynthesis?.cancel?.();state=defaultState();ui={region:'전체',search:'',selectedMemberId:null,selectedDressId:null};render();}break;
-    case 'help':alert('놀이 방법\n\n1. 내 이름만 적어요.\n2. 가족판에 원하는 가족과 반려동물을 추가해요. 얼굴·피부색·머리 모양을 고를 수 있어요.\n3. 나라를 하나 선택해요.\n4. 사람마다 전통의상을 고르고 반려동물에는 소품을 골라요.\n5. 완성하면 가족이 함께 걷는 여행 애니메이션과 나라·의상·수도 이야기를 볼 수 있어요.\n\n* 가족 유형은 구성만 보고 추정하는 놀이용 표시입니다.\n* 실제 전통의상은 지역과 공동체에 따라 달라요.');break;
+function makePreset(which){state.people=[];const groups={nuclear:['성인남자','성인여자','아이남자','아이여자'],single:['성인여자','아이여자'],extended:['노인남자','노인여자','성인남자','성인여자','학생여자','아이남자','아이여자']};(groups[which]||[]).forEach(t=>state.people.push(createPerson(t)));renderFamily()}
+function load(path){if(!sourceCache.has(path)){sourceCache.set(path,new Promise(resolve=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>resolve(null);img.src=folderURLs.get(path.split('/').pop())||encodeURI(path)}));if(sourceCache.size>45)sourceCache.delete(sourceCache.keys().next().value)}return sourceCache.get(path)}
+function importAssets(files){for(const url of folderURLs.values())URL.revokeObjectURL(url);folderURLs.clear();for(const file of files){if(file.name.toLowerCase().endsWith('.png'))folderURLs.set(file.name,URL.createObjectURL(file))}sourceCache.clear();fullCache.clear();thumbCache.clear();alphaBoundsCache.clear();toast('🖼️ 그림 '+folderURLs.size+'개 준비 완료!');if(state.screen==='dress'){renderWardrobe();renderStage()}else if(state.screen==='result')photo()}
+function clamp(x,a,b){return Math.min(b,Math.max(a,x))}
+function rgbHsl(r,g,b){r/=255;g/=255;b/=255;const hi=Math.max(r,g,b),lo=Math.min(r,g,b),delta=hi-lo;let h=0,s=0,l=(hi+lo)/2;if(delta){s=delta/(1-Math.abs(2*l-1));switch(hi){case r:h=((g-b)/delta)%6;break;case g:h=(b-r)/delta+2;break;default:h=(r-g)/delta+4};h=(h*60+360)%360}return [h,s,l]}
+function hslRgb(h,s,l){const a=s*Math.min(l,1-l);const f=n=>{const k=(n+h/30)%12;return Math.round(255*(l-a*Math.max(-1,Math.min(k-3,9-k,1))))};return [f(0),f(8),f(4)]}
+function colorHsl(hex){const d=hex.slice(1);return rgbHsl(parseInt(d.slice(0,2),16),parseInt(d.slice(2,4),16),parseInt(d.slice(4,6),16))}
+/* 이미지의 알파와 좌표를 보존한 채 RGB만 변경합니다.
+   피부: 밝은 하이라이트가 남지 않도록 기본 캐릭터 전경 전체를 균일하게 톤다운.
+   옷: 원본 0번은 픽셀 변경 없이 그대로 표시, 나머지 다섯 색만 저채도 파스텔. */
+function transformPixels(image,mode,choice,small=false){
+ const canvas=document.createElement('canvas');
+ const w=small?Math.min(image.naturalWidth,240):image.naturalWidth;
+ const h=small?Math.min(image.naturalHeight,360):image.naturalHeight;
+ canvas.width=w;canvas.height=h;
+ const ctx=canvas.getContext('2d',{willReadFrequently:true});
+ ctx.drawImage(image,0,0,w,h);
+ if(choice===0)return canvas;
+ const frame=ctx.getImageData(0,0,w,h),d=frame.data;
+ if(mode==='skin'){
+  // 피부에만 마스크를 씌우면 이마/뺨/발가락 하이라이트가 원본 흰색으로 남는 문제 해결.
+  // 요청대로 base 전경 전체를 균일하게 어둡게 하되 RGB/알파 패턴은 보존합니다.
+  const ratios=[[1,1,1],[.93,.84,.78],[.78,.67,.59],[.54,.43,.38]][choice]||[1,1,1];
+  for(let i=0;i<d.length;i+=4){if(d[i+3]===0)continue;
+   d[i]=Math.round(d[i]*ratios[0]);d[i+1]=Math.round(d[i+1]*ratios[1]);d[i+2]=Math.round(d[i+2]*ratios[2]);
   }
-});
-$app.addEventListener('change',ev=>{const t=ev.target;const field=t.dataset.field;if(['nickname','face','hair','shape'].includes(field))setStyle(field,t.value);});
-$app.addEventListener('input',ev=>{const t=ev.target;if(t.id==='country-search'){ui.search=t.value;const grid=document.getElementById('country-grid');if(grid)grid.innerHTML=countryCards();}});
-$app.addEventListener('keydown',ev=>{if(ev.key==='Enter'&&ev.target.id==='player-name'){ev.preventDefault();$app.querySelector('[data-action="start"]')?.click();}});
-if(!window.__GAME_SINGLE_FILE && 'serviceWorker'in navigator&&/^https?:$/.test(location.protocol)){navigator.serviceWorker.register('./sw.js').catch(()=>{});}
-render();
-// Exposed only for non-destructive local automated checks.
-window.FamilyDressupDebug={getState:()=>structuredClone(state),getCatalog:()=>COUNTRIES.map(c=>({id:c.id,name:c.name,capital:c.capital,outfitCount:c.outfits.length})),getFamilyInfo:()=>familyInfo()};
-})();
+ }else if(mode==='cloth'){
+  const [hue]=colorHsl(COLORS[choice].hex);
+  const bins=new Float64Array(36);let active=0;
+  // 메인 원단 색상 계열을 찾아 자수·꽃무늬와 짙은 윤곽은 유지합니다.
+  for(let i=0;i<d.length;i+=12){if(d[i+3]<100)continue;
+    const [h,s,l]=rgbHsl(d[i],d[i+1],d[i+2]);
+    if(s>.105&&l>.29&&l<.94){bins[Math.floor(h/10)%36]+=s*s;active++}
+  }
+  let dominant=-1,max=-1;
+  for(let j=0;j<36;j++)if(bins[j]>max){max=bins[j];dominant=j*10+5}
+  if(active<24)dominant=-1;
+  for(let i=0;i<d.length;i+=4){if(d[i+3]<10)continue;
+    const r=d[i],g=d[i+1],b=d[i+2],[h,s,l]=rgbHsl(r,g,b);
+    if(l<.23)continue; // 선과 아주 어두운 그림자 보존
+    const neutral=s<.095;
+    const distance=dominant<0?0:Math.abs(((h-dominant+540)%360)-180);
+    // 원본 원단과 관계없는 꽃/자수의 채도 높은 색은 변형하지 않습니다.
+    if(!neutral&&dominant>=0&&distance>53)continue;
+    // 흰 털, 흰 자수는 하얗게 유지. 온통 흰색인 의상은 순백색 빼고 착색.
+    if(neutral&&l>.92&&dominant>=0)continue;
+    let strength=neutral?.67:.88;
+    if(neutral&&l>.89)strength*=.30;
+    const targetL=clamp(l*.62+.29,.51,.94);
+    const targetSat=neutral?.22:.28;
+    const target=hslRgb(hue,targetSat,targetL);
+    d[i]=Math.round(r*(1-strength)+target[0]*strength);
+    d[i+1]=Math.round(g*(1-strength)+target[1]*strength);
+    d[i+2]=Math.round(b*(1-strength)+target[2]*strength);
+  }
+ }
+ ctx.putImageData(frame,0,0);return canvas;
+}
+/* file:// 에서 Safari의 이미지 픽셀 읽기가 제한되는 경우를 위한 동일한 색상계열의 CSS 대체안 */
+const CLOTH_CSS_FILTERS=[
+ 'none',
+ 'grayscale(1) sepia(.38) saturate(.85) hue-rotate(306deg) brightness(1.10) contrast(.83)',
+ 'grayscale(1) sepia(.40) saturate(.89) hue-rotate(232deg) brightness(1.11) contrast(.83)',
+ 'grayscale(1) sepia(.43) saturate(.72) hue-rotate(94deg) brightness(1.10) contrast(.84)',
+ 'grayscale(1) sepia(.42) saturate(.75) hue-rotate(160deg) brightness(1.11) contrast(.84)',
+ 'grayscale(1) sepia(.37) saturate(.69) hue-rotate(5deg) brightness(1.10) contrast(.84)'
+];
+const SKIN_CSS_FILTERS=[
+ 'none',
+ 'brightness(.87) sepia(.12) saturate(.94)',
+ 'brightness(.70) sepia(.15) saturate(.93)',
+ 'brightness(.48) sepia(.20) saturate(.85)'
+];
+function fallbackFilter(mode,num){return mode==='skin'?SKIN_CSS_FILTERS[num]:(mode==='cloth'?CLOTH_CSS_FILTERS[num]:'none')}
+function imageFallback(img,processed,mode,num){return processed===img?fallbackFilter(mode,num):'none'}
+function getFull(img,mode,num){if(num===0)return Promise.resolve(img);const key=img.src+'|'+mode+'|'+num;if(fullCache.has(key))return fullCache.get(key);
+ const p=new Promise(resolve=>{try{const c=transformPixels(img,mode,num,false);const out=new Image();out.onload=()=>resolve(out);out.onerror=()=>resolve(img);out.src=c.toDataURL('image/png')}catch(e){resolve(img)}});fullCache.set(key,p);if(fullCache.size>12){const oldest=fullCache.keys().next().value;fullCache.delete(oldest)}return p}
+function cropThumbnail(img,mode,num){const key=img.src+'|'+mode+'|'+num;if(thumbCache.has(key))return thumbCache.get(key);
+ let data=null;try{
+   const prepared=mode==='hair'?null:transformPixels(img,mode,num,true);
+   const frame=prepared||document.createElement('canvas');if(!prepared){frame.width=240;frame.height=360;frame.getContext('2d').drawImage(img,0,0,240,360)}
+   const ctx=frame.getContext('2d',{willReadFrequently:true}),d=ctx.getImageData(0,0,frame.width,frame.height).data;
+   let x1=frame.width,y1=frame.height,x2=0,y2=0;
+   const rows=new Uint16Array(frame.height),cols=new Uint16Array(frame.width);
+   for(let y=0;y<frame.height;y++)for(let x=0;x<frame.width;x++){if(d[(y*frame.width+x)*4+3]>105){rows[y]++;cols[x]++}}
+   // Ignore isolated, colored AI speckles near the transparent edges.
+   for(let y=0;y<frame.height;y++)if(rows[y]>Math.max(3,frame.width*.025)){y1=Math.min(y1,y);y2=Math.max(y2,y)}
+   for(let x=0;x<frame.width;x++)if(cols[x]>Math.max(3,frame.height*.012)){x1=Math.min(x1,x);x2=Math.max(x2,x)}
+   if(x1<x2&&y1<y2){const pad=9,bw=x2-x1+pad*2,bh=y2-y1+pad*2;const scale=Math.min(228/bw,228/bh);const thumb=document.createElement('canvas');thumb.width=240;thumb.height=240;thumb.getContext('2d').drawImage(frame,Math.max(0,x1-pad),Math.max(0,y1-pad),Math.min(frame.width-x1+pad,bw),Math.min(frame.height-y1+pad,bh),120-bw*scale/2,120-bh*scale/2,bw*scale,bh*scale);data=thumb.toDataURL('image/png')}
+ }catch(e){/* Safari local-file canvas is tainted: use CSS clipping and filter instead. */}
+ thumbCache.set(key,data);return data;
+}
+function makePreview(img,tab,num){const cropped=cropThumbnail(img,tab==='hair'?'hair':'cloth',num);const frame=document.createElement('span');frame.className='preview-frame';
+ const p=document.createElement('img');p.alt='';if(cropped){p.src=cropped;p.className='preview-cropped'}else{
+    p.src=img.src;p.className='preview-fallback fallback-'+tab;
+    if(tab!=='hair')p.style.filter=CLOTH_CSS_FILTERS[num];
+ }
+ frame.append(p);return {frame,src:cropped||img.src};
+}
+function clearLayer(el){el.removeAttribute('src');el.style.display='none';el.style.filter='none'}
+function layerOrder(){return (state.country==='중국')?['base','shoes','top','bottom']:(state.country==='북극'||state.country==='아랍')?['base','bottom','shoes','top']:['base','shoes','bottom','top']}
+function arabHeadCovered(person){return state.country==='아랍'&&person.worn.top!==null}
 
+async function renderStage(){const person=current();if(!person)return;const seq=++state.renderSeq;const base=$('layerBase'),top=$('layerTop'),bot=$('layerBottom'),shoes=$('layerShoes'),hair=$('layerHair');
+ $('stageName').textContent=person.name||charInfo(person).label;
+ const order=layerOrder();bot.style.zIndex=order.indexOf('bottom');top.style.zIndex=order.indexOf('top');shoes.style.zIndex=order.indexOf('shoes');hair.style.zIndex=4;
+ const work=[['base',basePath(person),person.skin,base],['shoes',person.worn.shoes===null?null:partPath(person,'shoes'),person.worn.shoes,shoes],['bottom',person.worn.bottom===null?null:partPath(person,'bottom'),person.worn.bottom,bot],['top',person.worn.top===null?null:partPath(person,'top'),person.worn.top,top],['hair',person.hair&&!arabHeadCovered(person)?hairPath(person,person.hair):null,0,hair]];
+ const results=await Promise.all(work.map(async([mode,path,n,el])=>{if(!path)return [el,null];const img=await load(path);if(!img)return [el,null];const output=mode==='base'?await getFull(img,'skin',n):(mode==='hair'?img:await getFull(img,'cloth',n));return [el,output.src,imageFallback(img,output,mode==='base'?'skin':mode==='hair'?'hair':'cloth',n)]}));if(seq!==state.renderSeq)return;
+ results.forEach(([el,src,filter])=>{if(!src){clearLayer(el)}else{el.src=src;el.style.filter=filter||'none';el.style.display='block'}});
+
+}
+function renderCountry(){
+ const nav=$('familyCountryGrid');nav.replaceChildren();COUNTRIES.forEach(c=>{
+  const btn=document.createElement('button');btn.className='family-country-button'+(state.country===c.id?' active':'');
+  btn.innerHTML='<span class="flag-emoji">'+c.flag+'</span><span class="flag-text">'+c.id+'</span>';
+  btn.setAttribute('aria-label',c.id+' 전통의상');btn.setAttribute('aria-pressed',state.country===c.id?'true':'false');
+  btn.onclick=()=>{state.country=c.id;renderCountry();if(state.screen==='dress'){renderWardrobe();renderStage()}};
+  nav.append(btn)
+ });
+ $('dressCountryLabel').innerHTML='<span class="dress-flag">'+countryInfo().flag+'</span><span>'+state.country+'</span>';
+}
+function renderMembers(){const nav=$('memberStrip');nav.replaceChildren();state.people.forEach((p,i)=>{const btn=document.createElement('button');btn.className='member-btn'+(state.index===i?' active':'');btn.innerHTML='<span class="small-emoji">'+charInfo(p).emoji+'</span>';const sp=document.createElement('span');sp.textContent=p.name||charInfo(p).label;btn.append(sp);btn.onclick=()=>selectMember(i);nav.append(btn)})}
+function renderTabs(){const nav=$('tabs');nav.replaceChildren();TABS.forEach(t=>{const btn=document.createElement('button');btn.className='tab'+(state.tab===t.id?' active':'');btn.innerHTML='<span class="icon">'+t.icon+'</span><span>'+t.label+'</span>';btn.onclick=()=>{state.tab=t.id;renderTabs();renderWardrobe()};nav.append(btn)})}
+function itemSelection(person,tab,num){if(tab==='hair')return person.hair===num;if(tab==='skin')return person.skin===num;return person.worn[tab]===num}
+function equip(tab,num){const p=current();if(!p)return;if(tab==='hair')p.hair=num;else if(tab==='skin')p.skin=num;else p.worn[tab]=num;renderWardrobe();renderStage()}
+async function renderWardrobe(){const person=current();if(!person)return;const panel=$('wardrobeGrid');panel.className='wardrobe-grid'+(state.tab==='skin'?' skin-grid':'');panel.replaceChildren();const ticket=(panel._ticket||0)+1;panel._ticket=ticket;const tab=state.tab;
+ if(tab==='skin'){
+    SKINS.forEach((s,i)=>{const btn=document.createElement('button');btn.className='skin-card'+(person.skin===i?' active':'');btn.setAttribute('aria-label',s.name);btn.innerHTML='<span class="skin-circle" style="background:'+s.hex+'"></span>';btn.onclick=()=>equip('skin',i);panel.append(btn)});return;
+ }
+ const count=tab==='hair'?5:6;const path=tab==='hair'?hairPath(person,1):partPath(person,tab);
+ for(let n=0;n<count;n++){
+   const num=tab==='hair'?n:n;const btn=document.createElement('button');btn.className='item-card'+(tab==='hair'?' hair-card':'')+(itemSelection(person,tab,num)?' selected':'');btn.dataset.num=String(num);btn.setAttribute('aria-label',tab==='hair'?(num===0?'머리 없음':'머리 '+num):(num===0?'의상 원본 색':'파스텔 의상 '+num));btn.innerHTML='<span style="font-size:34px;color:#edc8d6">✿</span>';panel.append(btn);
+   if(tab==='hair'&&n===0){btn.innerHTML='<span class="none-item">🌟</span>';btn.onclick=()=>equip('hair',0);continue}
+   const file=tab==='hair'?hairPath(person,num):path;
+   (async()=>{const img=await load(file);if(panel._ticket!==ticket||!btn.isConnected)return;if(!img){btn.remove();return}const preview=makePreview(img,tab,num);btn.replaceChildren();btn.append(preview.frame);
+     if(itemSelection(person,tab,num)){const star=document.createElement('span');star.className='selected-star';star.textContent='♥';btn.append(star)}
+     if(tab!=='hair'&&num>0){const strip=document.createElement('span');strip.className='swatch-strip';strip.style.background=COLORS[num].hex;btn.append(strip)}
+     wireDrag(btn,tab,num,preview.src);
+   })();
+ }
+ const filesFound=tab==='hair'?await Promise.all([1,2,3,4].map(k=>load(hairPath(person,k)))):await load(path);
+ if(panel._ticket!==ticket)return;
+ if(tab==='hair'&&filesFound.every(x=>!x))panel.insertAdjacentHTML('beforeend','<div class="no-assets">💇‍♀️</div>');
+ else if(tab!=='hair'&&!filesFound){panel.innerHTML='<div class="no-assets"><span>🌼</span>새 의상 준비 중!</div>'}
+}
+function wireDrag(card,tab,num,thumb){card.addEventListener('pointerdown',ev=>{if(ev.button!==undefined&&ev.button!==0)return;drag={id:ev.pointerId,startX:ev.clientX,startY:ev.clientY,x:ev.clientX,y:ev.clientY,card,tab,num,thumb,ghost:null};try{card.setPointerCapture(ev.pointerId)}catch(_){}});
+ card.addEventListener('pointermove',ev=>{if(!drag||drag.id!==ev.pointerId)return;drag.x=ev.clientX;drag.y=ev.clientY;const dist=Math.hypot(ev.clientX-drag.startX,ev.clientY-drag.startY);if(dist>10&&!drag.ghost){const ghost=document.createElement('img');ghost.className='ghost';ghost.src=thumb;document.body.append(ghost);drag.ghost=ghost}if(drag.ghost){drag.ghost.style.left=ev.clientX+'px';drag.ghost.style.top=ev.clientY+'px';const b=$('stageZone').getBoundingClientRect();$('stagePanel').classList.toggle('drop-ready',ev.clientX>=b.left&&ev.clientX<=b.right&&ev.clientY>=b.top&&ev.clientY<=b.bottom)}});
+ card.addEventListener('pointerup',ev=>{if(!drag||drag.id!==ev.pointerId)return;const b=$('stageZone').getBoundingClientRect();const near=ev.clientX>=b.left-25&&ev.clientX<=b.right+25&&ev.clientY>=b.top-25&&ev.clientY<=b.bottom+25;if(!drag.ghost||near)equip(drag.tab,drag.num);cleanDrag()});
+ card.addEventListener('pointercancel',cleanDrag);
+}
+function cleanDrag(){if(drag&&drag.ghost)drag.ghost.remove();drag=null;$('stagePanel').classList.remove('drop-ready')}
+function selectMember(index){if(index<0||index>=state.people.length)return;state.index=index;renderMembers();renderWardrobe();renderStage();$('familyChip').textContent='🏡 '+familyType()+' · '+state.people.length+'명'}
+function goDress(){if(!state.people.length)return;state.index=0;state.tab='top';show('dress');renderCountry();renderTabs();selectMember(0)}
+function fitCover(ctx,img,w,h){const ratio=Math.max(w/img.naturalWidth,h/img.naturalHeight);const sw=w/ratio,sh=h/ratio;const sx=(img.naturalWidth-sw)/2,sy=(img.naturalHeight-sh)/2;ctx.drawImage(img,sx,sy,sw,sh,0,0,w,h)}
+async function fetchLayerImages(person){const srcs=[['base',basePath(person),person.skin],['shoes',person.worn.shoes!==null?partPath(person,'shoes'):null,person.worn.shoes],['top',person.worn.top!==null?partPath(person,'top'):null,person.worn.top],['bottom',person.worn.bottom!==null?partPath(person,'bottom'):null,person.worn.bottom],['hair',person.hair&&!arabHeadCovered(person)?hairPath(person,person.hair):null,0]];
+ const outputs={};for(const [part,path,num] of srcs){if(!path)continue;const image=await load(path);if(!image)continue;const output=part==='base'?await getFull(image,'skin',num):(part==='hair'?image:await getFull(image,'cloth',num));outputs[part]={image:output,filter:imageFallback(image,output,part==='base'?'skin':part==='hair'?'hair':'cloth',num)};}return outputs;
+}
+function drawComposed(ctx,parts,x,y,width,height){
+ const order=[...layerOrder()];
+ if(parts.hair)order.push('hair');
+ order.forEach(name=>{if(parts[name]){ctx.save();const part=parts[name];ctx.filter=part.filter==='none'?'none':part.filter;try{ctx.drawImage(part.image,x,y,width,height)}finally{ctx.restore()}}});
+}
+function photoText(){const owner=$('ownerName').value.trim();const subject=owner?owner+'의 가족들은 ':'우리 가족은 ';const c=countryInfo();if(c.capital){const particle=word=>{const last=word.charCodeAt(word.length-1);return (last>=0xAC00&&last<=0xD7A3)&&((last-0xAC00)%28!==0)?'을':'를'};return subject+c.id+'의 전통옷인 '+c.clothes+particle(c.clothes)+' 입고 '+c.id+'의 수도인 '+c.capital+particle(c.capital)+' 방문했어요.'}
+ return subject+(c.id==='유럽'?'유럽의 전통 민속의상':c.id==='북극'?'북극 지역의 전통 방한복':'아랍 지역의 전통의상')+'을 입고 멋진 여행을 떠났어요!';}
+// PNG 내부의 실제 캐릭터 발 끝과 머리 시작 위치 (투명 여백 제외).
+// 오염된 로컬 이미지는 보수적 좌표로 대체합니다.
+function imageAlphaBounds(img){
+ if(!img)return {top:.015,bottom:.977};
+ const key=img.src+'|bounds';if(alphaBoundsCache.has(key))return alphaBoundsCache.get(key);
+ let bounds={top:.015,bottom:.977};
+ try{
+  const tmp=document.createElement('canvas');tmp.width=110;tmp.height=165;
+  const t=tmp.getContext('2d',{willReadFrequently:true});t.drawImage(img,0,0,110,165);
+  const d=t.getImageData(0,0,110,165).data;let top=165,bottom=-1;
+  for(let y=0;y<165;y++){
+   let count=0;for(let x=0;x<110;x++)if(d[(y*110+x)*4+3]>105)count++;
+   // 경계 주변에 있는 AI 잡티 1~2픽셀은 무시합니다.
+   if(count>=4){top=Math.min(top,y);bottom=Math.max(bottom,y)}
+  }
+  if(bottom>top){bounds={top:top/165,bottom:(bottom+1)/165}}
+ }catch(_){}
+ alphaBoundsCache.set(key,bounds);return bounds;
+}
+async function photo(){
+ if(!state.people.length)return;
+ const ticket=++state.photoSeq;show('result');
+ $('resultCountry').textContent=countryInfo().flag+' '+state.country;
+ $('resultCaption').textContent=photoText();
+ const c=$('photoCanvas'),ctx=c.getContext('2d');
+ ctx.clearRect(0,0,c.width,c.height);
+ const bg=await load(backgroundPath());if(ticket!==state.photoSeq)return;
+ if(bg){try{fitCover(ctx,bg,c.width,c.height)}catch(_){drawFallback(ctx,c.width,c.height)}}else drawFallback(ctx,c.width,c.height);
+ ctx.fillStyle='#ffffff13';ctx.fillRect(0,0,c.width,c.height);
+ const n=state.people.length,margin=55,available=c.width-2*margin,cell=available/n;
+ const floorY=c.height-10;
+ for(let i=0;i<n;i++){
+  if(ticket!==state.photoSeq)return;
+  const p=state.people[i],parts=await fetchLayerImages(p),type=charInfo(p).id;
+  const factor=type.startsWith('아이')?.80:type.startsWith('학생')?.91:1;
+  const pw=Math.min(510,cell*1.21)*factor;
+  // 1인 사진도 이름이 머리 위로 들어갈 수 있도록 상단에 여유를 둡니다.
+  const ph=Math.min(pw*1.5,760),px=margin+cell*(i+.5)-pw/2;
+  const bounds=imageAlphaBounds(parts.base&&parts.base.image);
+  const py=floorY-bounds.bottom*ph;
+  try{drawComposed(ctx,parts,px,py,pw,ph)}catch(e){}
+  const headY=py+bounds.top*ph;
+  const font=clamp(cell*.20,19,33);
+  ctx.font='bold '+font+'px "Apple SD Gothic Neo","Malgun Gothic",sans-serif';
+  ctx.fillStyle='#fff';ctx.strokeStyle='#634d66c9';ctx.lineWidth=6;ctx.lineJoin='round';ctx.textAlign='center';
+  const nameY=Math.max(font+10,headY-12);
+  ctx.strokeText(p.name||charInfo(p).label,margin+cell*(i+.5),nameY,cell*.97);
+  ctx.fillText(p.name||charInfo(p).label,margin+cell*(i+.5),nameY,cell*.97);
+ }
+}
+function drawFallback(ctx,w,h){const grad=ctx.createLinearGradient(0,0,0,h);grad.addColorStop(0,'#d9edf4');grad.addColorStop(.72,'#ffeddb');grad.addColorStop(1,'#c5debd');ctx.fillStyle=grad;ctx.fillRect(0,0,w,h);ctx.fillStyle='#ffffff88';for(let i=0;i<7;i++){ctx.beginPath();ctx.arc((i*283+180)%w,100+(i%3)*47,65+i*3,0,2*Math.PI);ctx.fill()}ctx.fillStyle='#c4dfa9';ctx.fillRect(0,h*.88,w,h*.12)}
+function splitText(ctx,text,maxWidth){const words=text.split(' ');const lines=[];let current='';for(const word of words){const next=current?current+' '+word:word;if(ctx.measureText(next).width>maxWidth&&current){lines.push(current);current=word}else current=next}if(current)lines.push(current);return lines}
+function savePhoto(){const p=$('photoCanvas'),c=document.createElement('canvas');c.width=1600;c.height=1010;const ctx=c.getContext('2d');try{ctx.drawImage(p,0,0);ctx.fillStyle='#fffaf8';ctx.fillRect(0,860,1600,150);ctx.font='bold 43px "Apple SD Gothic Neo",sans-serif';ctx.fillStyle='#825b78';ctx.textAlign='center';const lines=splitText(ctx,photoText(),1490);const start=900-(lines.length-1)*24;lines.forEach((line,i)=>ctx.fillText(line,800,start+48*i));const link=document.createElement('a');link.download='우리_가족_'+state.country+'_여행.png';link.href=c.toDataURL('image/png');link.click();toast('🌷 가족사진을 저장했어요')}catch(e){toast('Safari에서 사진을 길게 눌러 저장해 주세요')}}
+function resetGame(){
+ ++state.renderSeq;++state.photoSeq;
+ const panel=$('wardrobeGrid');panel._ticket=(panel._ticket||0)+1;
+ cleanDrag();
+ state.country='한국';state.people=[];state.index=0;state.tab='top';state.nextId=1;
+ $('ownerName').value='';$('photoCanvas').getContext('2d').clearRect(0,0,1600,860);
+ ['layerBase','layerShoes','layerBottom','layerTop','layerHair'].forEach(id=>clearLayer($(id)));
+ $('memberStrip').replaceChildren();panel.replaceChildren();
+ renderFamily();renderCountry();show('landing');
+}
+function initialize(){
+ $('startBtn').onclick=()=>show('family');$('dressCountryLabel').onclick=()=>{show('family');renderCountry()};$('roleGrid').replaceChildren();TYPES.forEach(t=>{const btn=document.createElement('button');btn.className='role-card';btn.innerHTML='<span class="role-emoji">'+t.emoji+'</span><span>'+t.label+'</span>';btn.onclick=()=>addPerson(t.id);$('roleGrid').append(btn)});
+ $('assetsImport').onclick=()=>$('assetFolder').click();$('assetFolder').addEventListener('change',e=>{if(e.target.files.length)importAssets(e.target.files)});document.querySelectorAll('[data-preset]').forEach(b=>b.onclick=()=>makePreset(b.dataset.preset));$('familyNext').onclick=goDress;
+ $('previousMember').onclick=()=>selectMember((state.index-1+state.people.length)%state.people.length);$('nextMember').onclick=()=>selectMember((state.index+1)%state.people.length);
+ $('takePicture').onclick=photo;$('dressFinish').onclick=photo;$('backToDress').onclick=resetGame;$('savePicture').onclick=savePhoto;renderFamily();renderCountry();
+}
+initialize();
 </script>
 </body>
 </html>
